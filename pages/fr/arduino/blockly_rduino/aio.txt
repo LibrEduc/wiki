@@ -1,0 +1,25 @@
+====== Blockly@rduino_AIO ======
+
+===== C'est quoi ? =====
+
+C'est l'intégration de tous les modules complémentaires à [[:fr:arduino:blockly_rduino|Blockly@rduino]] : supervision, téléversement, EDI Arduino TechnoEduc, détection automatique de cartes, mises à jour de Blockly@rduino automatiques, etc…
+
+Tout d'abord, commencez par regarder cette vidéo :
+
+{{url>https://mediacad.ac-nantes.fr/m/2047/d/i}}
+
+===== Comment le télécharger ? =====
+
+Comme cet ensemble logiciel est assez conséquent (~800 Mo), vous devez utiliser un logiciel de synchronisation pour vous permettre de ne télécharger que les nouvelles versions des fichiers modifiés sans avoir besoin de TOUT re-télécharger à chaque fois : [[https://github.com/technologiescollege/BlocklyArduino_AIO|https://github.com/technologiescollege/BlocklyArduino_AIO]]
+
+Le principe est simple (//**documentation **//  : [[https://github.com/technologiescollege/BlocklyArduino_AIO/blob/master/Blockly@rduino_synchro.pdf|https://github.com/technologiescollege/BlocklyArduino_AIO/blob/master/Blockly%40rduino_synchro.pdf]]):
+
+  - vous dézippez le logiciel quelque part,
+  - vous le lancez (**le mot de passe est 'technorigolo'**),
+  - vous lui indiquez où déposer les fichiers,
+  - vous le laissez faire et m’envoyez un petit mail de remerciement …
+
+Ce client de synchronisation va se connecter tout seul au serveur et va comparer vos fichiers sur votre disque dur local, puis écraser avec les nouvelles versions. Ensuite il vous suffit de le couper et de ne le relancer que de temps en temps.
+
+<font inherit/inherit;;#FF0000;;inherit>**Faîtes attention à ne synchroniser que le dossier \Shared\Blockly@rduino !**</font>
+

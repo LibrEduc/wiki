@@ -1,0 +1,6 @@
+<font 18px/trebuchet ms,helvetica,sans-serif;;inherit;;inherit>Vous pouvez nous contacter à propos de ce travail :</font>
+
+  * [[Sebastien.Canet@ac-nantes.fr?subject=Wiki|Sebastien.Canet@ac-nantes.fr ]]
+  * [[Michel-Guy-Clau.Freard@ac-nantes.fr?subject=Wiki|Michel-Guy-Clau.Freard@ac-nantes.fr ]]
+
+Merci de partager vos expériences, documents, idées, envies d'améliorations, remontées de bugs, etc.

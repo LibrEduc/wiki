@@ -1,0 +1,67 @@
+__**Qu'est-ce qu'un timelapse ?** __ 
+
+
+Un timelapse est une animation vidéo réalisée par une série de photographies prises à des moments différents pour présenter en un laps de temps court l’évolution de l’objet photographié sur une période longue. On peut l’employer par exemple pour montrer l’ouverture d’une fleur, le mouvement du soleil ou des étoiles dans le ciel, voire la construction d’une maison. Le fichier final prend la forme d’une vidéo ou d’un fichier au format Gif animé.
+
+
+//Un exemple de timelapse.// 
+
+
+__**Le module caméra Rpi**__ 
+
+
+Le module reçu est une rev 1.3, le capteur Omnivision (OV5647) fait penser à celui présent dans de nombreux smartphones . Il a une définition maximale de 5 millions de pixels et est capable de filmer en 1080p à 30 images/s ou en 720p à 60 images/s. Il est monté sur une petite carte qui se connecte au Raspberry Pi via une nappe (un bus de type CSI-2), ce qui laisse l'avantage de rendre disponible les ports USB de la carte peu nombreux.
+
+
+{{:rpi:camera_rpi.jpg?nolink&400x308}}
+
+
+//Comment assembler le module Camera sur le Rpi// 
+
+
+__**Activer le support de la caméra dans Raspbian**__ 
+
+
+L'installation physique étant terminée, nous allons maintenant activer la caméra.
+
+
+Démarrez le RPi et connectez-le. (s'il n'ont pas été modifiés, le nom d'utilisateur par défaut est pi, et le mot de passe par défaut est raspberry).
+
+
+Avant toute modification/installation sur le système, il est bon de mettre à jour la distribution avec la dernière version en tapant dans un terminal :
+
+
+$ sudo apt-get update && sudo apt-get upgrade
+
+
+Il ne nous reste plus qu'à accéder aux paramètres de configuration du RPi en exécutant la commande suivante :
+
+
+$ sudo raspi-config
+
+
+Déplacez-vous dans le menu jusqu'à "camera" et activez-le.
+
+
+{{:rpi:rpi_config.jpg?nolink&400x211}}
+
+
+Pour terminer, sélectionner "Finish" et rebooter le RPi.
+
+
+__**Utilisation de la RasPiCam pour un timelapse**__ 
+
+
+L'utilisation est simple, la caméra est accessible grâce à deux logiciels en ligne de commande qui permettent de prendre des photos (raspistill) et des vidéos (raspivid).
+
+
+Un tutoriel vidéo vous explique les différentes étapes.
+
+
+<html>
+
+
+<iframe src="//player.vimeo.com/video/82605157?title=0&byline=0&portrait=0" width="500" height="283" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </html> // 
+
+
+~~COMPLEX_TABLES~~

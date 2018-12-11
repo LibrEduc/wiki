@@ -1,0 +1,69 @@
+Pour rajouter un bouton dans le menu de gauche, il faut agir à cinq endroits différents :
+
+  - **index.html **  pour l'insérer au bon endroit et définir son action,
+  - les fichiers de langue dans le dossier **/lang/msg/fr.js**  (//et aussi **en.js**  please//) pour le label qui apparaît sur le bouton
+  - **/lang/code.js**  méthode initLanguage pour mettre le label sur le span
+  - **/utils/blocklyDuino.js**  pour le changement horizontal/vertical
+  - le css pour définir les propriétés hor/ver : ça c'est bon si tu appliques btn_ver
+
+Prenons exemple du bouton de supervision mais <font inherit/inherit;;#FF0000;;inherit>** faîtes TRÈS attention aux noms des variables. **</font>
+
+<file>
+/!\ATTENTION AU TYPE DE BOUTON ! /!\
+
+**Toutes les informations sur les classes de bouton ici : http://www.w3schools.com/bootstrap/bootstrap_buttons.asp**
+</file>
+
+**1.**  Dans** index.html **  je définis le bouton où je veux le voir apparaître :
+
+<code>
+        <div id="divSupervision">
+                <button id="btn_supervision" class="text-left btn btn-primary btn-block ">
+                    <span class="glyphicon glyphicon-blackboard"> </span>
+                    <span id="span_supervision"> </span>
+                </button>
+        </div>
+</code>
+
+**2.**  Comme le texte sur le bouton appartient à l'interface globale, sa traduction //n'est pas dans /lang/blocks//  mais dans **/lang/msg**  :
+
+<code>
+span_supervision : " contrôle de la carte",
+</code>
+
+**3.**  Attention là c'est plus //délicat//, pas plus difficile. Ce fichier sert à définir l'initialisation de l'espace de travail de travail de Blockly@rduino, donc il faut aussi définir l'initialisation des textes sur les boutons. Dans le fichier **/lang/code.js**, en bas vous rajoutez :
+
+<code>
+document.getElementById('span_supervision').textContent = MSG['span_supervision'];
+</code>
+
+**4.**  Comme on s'est compliqué la vie à gérer les positions dans le cas où votre écran est plutôt vertical ou horizontal, il faut encore rajouter la définition de nouveau bouton dans ces styles et ça se trouve dans le fichier** /utils/blocklyDuino/.js**  encore une fois tout en bas. Dans :
+
+<code>
+if (newOrientation == 'hor') {
+</code>
+
+vous rajoutez
+
+<code>
+var divSupervision = document.getElementById("divSupervision");
+
+divSupervision.className += " divConfig-hor";
+</code>
+
+**et plus bas **  dans
+
+<code>
+} else {
+</code>
+
+vous rajoutez aussi
+
+<code>
+var btn_supervision  = document.getElementById("btn_supervision");
+
+btn_supervision += " btn_ver";
+</code>
+
+**5.**  Et pour finir (//oui, enfin//….) pour les //experts //  il est possible de jouer avec le fichier** /css/blocklyDuino.css**  qui contient les définitions de style, mais dans le point précédent je me suis contenté d'appliquer un style standard.
+

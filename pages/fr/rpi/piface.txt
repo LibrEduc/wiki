@@ -1,0 +1,13 @@
+Qu'est ce que le [[:raspberry_pi|Raspberry ]]?
+
+
+C'est qui [[:piface|PiFace ]]?
+
+
+C'est quoi le [[:piface_digital|PiFace Digital]] ?
+
+
+Première vidéo de démonstration :
+
+
+{{video>http://mfreard.free.fr/piface1.MP4|Alternate text}}

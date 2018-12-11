@@ -1,0 +1,43 @@
+====== 1 - Comment choisir la carte Arduino MEGA par défaut ======
+
+<font 16px/inherit;;inherit;;inherit>Il faut éditer le fichier :</font>
+
+<file>
+/core_BlocklyArduino/blockly@rduino.js
+</file>
+
+<font 16px/inherit;;inherit;;inherit>et modifier autour de la // ligne 25 // :</font>
+
+<code>
+BlocklyDuino.selectedCard = 'arduino_uno';
+</code>
+
+<font 16px/inherit;;inherit;;inherit>en mettant ** arduino_mega ** à la place de ** arduino_uno ** .</font>
+
+
+====== 2 - Comment choisir les catégories de blocs par défaut ======
+
+<font 16px/inherit;;inherit;;inherit>Il faut tout d'abord définir la //toolbox //(le menu) voulu par défaut, à la ligne 528 de ''index.html'' :</font>
+
+<code>
+<font 16px/inherit;;inherit;;inherit><select id="toolboxes">
+<option value="./toolbox/toolbox_algo">Algorithme simple</option>
+<option value="./toolbox/toolbox_arduino_1">Arduino pour débutants</option>
+<option value="./toolbox/toolbox_arduino_2">Arduino pour habitués</option>
+<option value="./toolbox/toolbox_arduino_3">Arduino pour experts</option>
+<option value="./toolbox/toolbox_arduino_all" selected="selected">TOUT</option>
+</select></font>
+</code>
+
+<font 16px/inherit;;inherit;;inherit>Par défaut la //toolbox //"TOUT" est sélectionnée.</font>
+
+<font 16px/inherit;;inherit;;inherit>Dans le fichier correspondant à la //toolbox //sélectionnée précédemment, à la 3ème ligne il y a la liste des catégories par défaut. Donc dans mon exemple de la toolbox "TOUT" on ouvre le fichier'' \toolbox\toolbox_arduino_all.xml''</font>
+
+<code>
+<toolbox>
+    <parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO
+    </parametre>
+</code>
+
+<font 16px/inherit;;inherit;;inherit>**Le nom des catégories à écrire sur la ligne doit correspondre à celui détaillé dans ce fichier xml.**</font>
+

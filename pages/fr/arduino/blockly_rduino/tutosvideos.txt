@@ -1,0 +1,19 @@
+====== Tutoriels vidéos ======
+
+==== Blockly@rduino et son module de communication  ====
+
+|{{url>https://mediacad.ac-nantes.fr/m/2018/d/i}}|
+|{{url>https://mediacad.ac-nantes.fr/m/2017/d/i}}|
+|{{url>https://mediacad.ac-nantes.fr/m/2016/d/i}}|
+|{{url>https://mediacad.ac-nantes.fr/m/2020/d/i}}|
+
+==== Blockly@rduino et AppInventor2 ====
+
+{{url>https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr}}
+
+==== Blockly@rduino_AIO ====
+
+{{url>https://mediacad.ac-nantes.fr/m/2047/d/i}}
+
+\\
+

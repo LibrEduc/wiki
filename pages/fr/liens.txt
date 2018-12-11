@@ -1,0 +1,90 @@
+PiFace Digital chez Element14 : [[http://www.element14.com/community/docs/DOC-52857?ICID=rasp-accessory-group|PiFace Digital for Raspberry Pi]].
+
+Scratch pour PiFace chez Element14 : [[http://www.element14.com/community/docs/DOC-53805/l/scratch-project-for-piface-demo|Scratch project for PiFace demo]].
+
+Le forum sur Scratch : [[http://www.raspberrypi.org/phpBB3/viewforum.php?f=77&sid=8f70297af841f4fdb0ca482332b9e9c3|sur le site officiel du RPi]].
+
+Scratch <font 9pt/arial;;#000000;;#ffffff>Guide de référence :</font>    [[http://scratchfr.free.fr/k1n8g7/RGfinalAugust2209/translate_p.html|http://scratchfr.free.fr/k1n8g7/RGfinalAugust2209/translate_p.html]]
+
+La documentation officielle : [[http://piface.github.io/pifacedigitalio/|PiFace Digital I/O’s documentation]].
+
+Le site officiel de PiFace et des différents shield : [[http://www.piface.org.uk/|PiFace]].
+
+Le blog de cimplecy, créateur de ScratchGPIO : [[http://cymplecy.wordpress.com/|cimplecy]].
+
+Distrib avec juste un Scratch Interface Device (SID) : [[http://cymplecy.wordpress.com/sidrpi/|cimplecy]]
+
+La page sur le How-to du PiRoCon : [[http://4tronix.co.uk/blog/?p=41|4tronix]].
+
+Un robot bardé d'électronique : [[http://smoofyrobot.wordpress.com/2012/12/18/smoofy-v3/smoofy_v33/|Smoofy]].
+
+**<font 18px/verdana,geneva,sans-serif;;#000000;;#ffffff>A documenter</font>    **
+
+[[http://unix.stackexchange.com/questions/35030/how-can-i-copy-paste-data-to-and-from-the-windows-clipboard-to-an-opensuse-clipb|Copier-coller dans TightVNC]]
+
+[[https://www.modmypi.com/blog/remotely-accessing-the-raspberry-pi-via-rdp-gui-mode|Contrôle à distance avec XRDP]]
+
+Installer et configurer le wifi
+
+[[http://lcdev.dk/2012/11/18/raspberry-pi-tutorial-connect-to-wifi-or-create-an-encrypted-dhcp-enabled-ad-hoc-network-as-fallback/|Mettre le wifi en hotspot]]
+
+[[http://blog.idleman.fr/billet-invite-creer-un-nas-avec-le-raspberry-pi/|Monter un dossier en partage réseau]].
+
+[[https://github.com/piface/pifacedigital-scratch-handler#install|Mettre à jour le handler PiFace]]
+
+[[http://4tronix.co.uk/arduino/Pan-Tilt-Micro.php|Monter la tête orientable]].
+
+[[http://learn.adafruit.com/synergy-on-raspberry-pi?view=all|KVM logiciel par Synergy]]
+
+**<font 18px/verdana,geneva,sans-serif;;#000000;;#ffffff>A faire</font>    **
+
+Réduire l'image de la carte SD : [[http://raspberrypi.stackexchange.com/questions/8437/use-smaller-space-when-i-have-expand-it|http://raspberrypi.stackexchange.com/questions/8437/use-smaller-space-when-i-have-expand-it]]
+
+ou :
+
+Pour obtenir une image plus petite il suffit de la compresser. Par contre pour que la compression soit efficace il faut que la partition soit "pleine", l'astuce consistant a créer plein de zéro pour ensuite les effacer. La compression sera très bonne. En substance ça donne ceci :
+
+#pour faire l'image :\\
+#on monte la partition\\
+mount /dev/maparitition /tmp/dossier_tempo\\
+#on crée le fichier de zero, ca vas planté pour cuase de plus de place, mais pas grave\\
+dd if=/dev/zero of=/tmp/dossier_tempo/zerofile\\
+# on detruit ce fichier\\
+rm /tmp/dossier_tempo/zerofile\\
+# on demonte la partition\\
+umount /tmp/dossier_tempo\\
+#on compress le tout\\
+cat /dev/mapartition | gzip - > monimage.img.gz
+
+\\
+# et pour installé l'image\\
+gunzip -c monimage.img.gz > /dev/maparitition
+
+Partir de l'image la plus petite possible pour n'installer que l'essentiel : [[http://www.linuxsystems.it/raspbian-wheezy-armhf-raspberry-pi-minimal-image/|Raspbian Wheezy armhf Raspberry Pi minimal image]].
+
+TightVNC par web & multisession : [[http://dmesg.fr/categorie-reseau/114-tightvnc-server-pilotez-a-distance-plusieurs-sessions-graphiques-multi-utilisateurs-a-partir-du-meme-pc|pilotez à distance plusieurs sessions graphiques multi utilisateurs ]]
+
+Installer Freedomotic : [[http://freedomotic.com/content/install-freedomotic-raspberry-pi|http://freedomotic.com/content/install-freedomotic-raspberry-pi]] (ou sur Google Code : [[http://code.google.com/p/freedomotic/wiki/RaspberryPi|http://code.google.com/p/freedomotic/wiki/RaspberryPi).]]
+
+PiFace Organ : [[http://www.piface.org.uk/guides/raspberry_organ_guide/making_touch_sensitive_inputs/|http://www.piface.org.uk/guides/raspberry_organ_guide/making_touch_sensitive_inputs/]]
+
+PiFace sur une maquette Lego : [[http://raspuino.blogspot.co.uk/2013/06/the-lego-technic-elevator-controlled-by.html|http://raspuino.blogspot.co.uk/2013/06/the-lego-technic-elevator-controlled-by.html]]
+
+**<font 18px/verdana,geneva,sans-serif;;#000000;;#ffffff>Autres projets autour du Raspberry</font>    **
+
+Caméra & robots : [[http://www.mybigideas.co.uk/RPi/index.php|http://www.mybigideas.co.uk/RPi/index.php]]
+
+RoverPi : [[http://www.wakdev.com/projets/roverpi.html|http://www.wakdev.com/projets/roverpi.html]]
+
+[[http://raspberrytank.ianrenton.com/|Tank]] & liens vers :
+
+  * [[http://wiki.raspberrytorte.com/index.php?title=RaspberryTortoise|Raspberry Tortoise]]
+  * [[http://www.fishpi.org/|FishPi]]
+  * [[http://www.raspberrypi.org/archives/2348|Wiimote-Controlled Roomba]]
+  * [[http://www.youtube.com/watch?v=VVNgPjM5pU4|RPi Robot using LAMP + Node.js]]
+  * [[http://pi-cars.com/2012/11/13/pi-cars-control-your-radio-controlled-cars-through-your-raspberry-pi/|Pi-Cars]]
+  * [[http://ubcsailbot.org/|UBC Sailbot]]
+
+[[http://korben.info/idees-raspberry-pi.html|Plus de 50 idées pour votre Raspberry Pi]]
+
+[[http://mkcastor.com/2014/01/02/pipad-build/|Se faire sa propre tablette à base de RPi]].

@@ -1,0 +1,17 @@
+======   Parcours destiné à des enfants débutants de 10 à 12 ans.   ======
+
+Ceux-ci vont se familiariser avec des capteurs/actionneurs classiques avant de finir par créer leur propre projet.
+
+Afin de favoriser au maximum les découvertes et de tout comprendre, on ne voit que quelques éléments et la création ne se base sur aucun kit tout fait.
+
+{{url>https://player.vimeo.com/video/168549173?byline=0&portrait=0 640px,360px noscroll noborder}}
+
+Suivez aussi les sous-rubriques ci-dessous :
+
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique24|1er contact avec Scratch]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique33|un bidule qui clignote]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique34|ce qu’il faut retenir]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique35|un bidule qui clignote quand JE lui dis]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique36|un bidule que j’oriente dans les 3 dimensions]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique38|un bidule que je commande au doigt et à l’oeil]]
+

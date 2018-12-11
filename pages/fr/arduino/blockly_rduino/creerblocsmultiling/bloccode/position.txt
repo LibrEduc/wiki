@@ -1,0 +1,14 @@
+====== Mais comment organiser tous ces codes ? ======
+
+Blockly, à travers sa mécanique interne et les différents générateurs, va classer les codes de vos blocs en suivant la logique suivante :
+
+  - Blockly.Arduino.includes_['test'] = '1er';
+  - Blockly.Arduino.variables_['test'] = '2eme';
+  - Blockly.Arduino.definitions_['test'] = '3eme';
+  - Blockly.Arduino.codeFunctions_['test'] = '4eme';
+  - Blockly.Arduino.userFunctions_['test'] = '5eme';
+  - Blockly.Arduino.setups_['test'] = placé exclusivement dans la fonction "void setup()";
+  - var code = tout le texte qui sera placé dans la fonction "void loop()"
+
+**<font inherit/inherit;;#FF0000;;inherit>ATTENTION</font>**toutefois à ne pas choisir par égo ("je veux être tout en haut !" {{http://info.technologiescollege.fr/wiki/lib/plugins/ckgedit/ckeditor/plugins/smiley/images/tongue_smile.png?nolink&23x23|cheeky}}) mais bien par logique de programmation.
+

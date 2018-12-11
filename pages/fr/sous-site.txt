@@ -1,0 +1,6 @@
+====== Subsites ======
+ 
+This page lists available subsites (organized as namespaces).
+ 
+  * [[accueil|Français]]
+  * [[en:start|English]]

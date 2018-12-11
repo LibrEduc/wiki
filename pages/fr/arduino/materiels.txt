@@ -1,0 +1,31 @@
+[[:fr:arduino:flycam|caméra FlyCamEco one v2]]
+
+[[:fr:arduino:flycam|{{http://www.camonetec.com/assets/images/fc2410/fc2410_lieferumfang.jpg?nolink&300x129}}]]
+
+[[:fr:arduino:telecommande|télécommande XY-DJM-5V]]
+
+[[:fr:arduino:telecommande|{{http://www.libremechanics.com/sites/default/files/RF control_0.jpg?nolink&384x205}}]]
+
+[[:fr:arduino:obstacle|détecteur d'obstacles FC-51]]
+
+[[:fr:arduino:obstacle|{{http://www.icstation.com/images/productimages/2432/2432.JPG?nolink&300x300}}]]
+
+[[:fr:arduino:ultrason|bluetooth HC-06]]
+
+[[:fr:arduino:ultrason|{{https://lh5.googleusercontent.com/-zhNRW8GElFQ/UtQ3Zhx2JtI/AAAAAAAABIU/geAl7m0-E-4/w600-h450-no/bluetooth_hc06_arduino.jpg?nolink&300x225}}]]
+
+[[:fr:arduino:nunchuck|Nunchuck Wii]]
+
+[[:fr:arduino:nunchuck|{{https://lh6.googleusercontent.com/-c2gRdAOeQpQ/Ug4pnJIj0oI/AAAAAAAAAJM/acq0FWgqQbQ/w400-h300-no/nunchuck_axes.jpg?nolink&300x225}}]]
+
+[[:fr:arduino:led_rgb|LED trois couleurs RGB]]
+
+[[:fr:arduino:led_rgb|{{https://lh4.googleusercontent.com/-vqm3poM6eoA/UiuTDzDDq_I/AAAAAAAAAn4/JNdG1b9UDyY/w400-h300-no/led_tricolore.jpg?nolink&300x225}}]]
+
+[[:fr:arduino:hc-sr-04|Mesure de distance par ultrason HC SR-04]]
+
+[[:fr:arduino:hc-sr-04|{{https://lh5.googleusercontent.com/-nyEtknwvtLc/UssrjqsLR2I/AAAAAAAABEg/S3wbZ_0jjQs/w400-h250-no/ultrason_verso.jpg?nolink&300x188}}]]
+
+[[:fr:arduino:lcd-i2c|Afficheur LCD I2C]]
+
+[[:fr:arduino:lcd-i2c|{{http://arduino.cc/en/uploads/Tutorial/lcd_photo.png?nolink&300x159}}]]

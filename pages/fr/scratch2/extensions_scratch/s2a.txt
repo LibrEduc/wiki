@@ -1,0 +1,48 @@
+Cette extension pour Scratch permet le pilotage des interfaces Arduino. Cette version portable, pour Windows, et francisée est modifiée pour simplifier son installation/utilisation. **L'interface graphique peut être traduite ! **
+
+{{:fr:arduino:capture.jpg?nolink&507x243  }}Des traductions sont aussi accessibles en chinois, hollandais, anglais, allemand, coréen, portuguais et espagnol. //**Mais les scripts de cette version seront françisés à outrance et portabilisés pour être le plus simple possible**//.
+
+**Utilisateurs d’Arduino !** Voudriez-vous configurer et contrôler votre micro-contrôleur Arduino sans devoir écrire une seule ligne de code (//sketch//) Arduino et **avoir en même temps l'accès à une interface graphique** ?
+
+**Utilisateurs de Snap! et Scratch !** Voudriez-vous contrôler et communiquer avec une carte Arduino ? Imaginez-vous, en utilisant Scratch ou Snap!, contrôler des dispositifs physiques comme des DELS, des moteurs et des relais en captant les valeurs de dispositifs, comme des capteurs de température, des potentiomètres et des capteurs de lumière. Que créeriez-vous ?
+
+**Ne cherchez plus, s2a est là !**
+
+//Si vous voulez plus de détails sur le contrôle de moteurs (robots) par WiFi, pour Scratch ou Snap!, consultez l'article de Alan Yorinks sur : [[http://www.instructables.com/id/The-SnapMobile-Start-Your-Physical-Computing-Engin/|http://www.instructables.com/id/The-SnapMobile-Start-Your-Physical-Computing-Engin/]]//
+
+Cette version fonctionne aussi bien avec la version en ligne que hors-ligne. Toutefois veuillez à vérifier que vous avez une version récente (404 ou supérieure).
+
+===== Instructions =====
+
+Vous trouverez dans le dossier Documentation tous les détails, et dans le sous dossier Approfondissement vous trouverez le manuel de référence ainsi que les documentations des modules supplémentaires (PyMata et PySerial).
+
+===== Version 2.3 du 25 mai 2015 =====
+
+Ca y est ! Tout est fini ! **Nouveautés** :
+
+   * possibilité de sélectionner les dossiers utilisés pour afficher les documentations, fichiers exemples, etc. Il est donc possible de modifier les préférences en éditant le fichier 's2a.ini' mais aussi par l'interface graphique. //Pensez à relancer le logiciel après.//
+  * un dossier "Bibliothèque" qui contient des exemples illustrés d'utilisation de s2a
+  * un dossier "Projets" qui contient des exemples de fichiers, un peu un dossier de travail
+  * un menu "Fichier" qui liste automatiquement les fichiers des 2 dossiers précédemment décrits
+  * un menu "Outils" avec l'accès au gestionnaire de périphériques et la localisation de Scratch2 en hors-ligne
+  * un fichier "label.xml" qui contient les **traductions**
+  * lien vers [[https://github.com/technologiescollege/Blockly-at-rduino|Blockly@rduino]]
+  * téléversement de FirmataPlus depuis le menu 'Outils', pour Uno & Mega
+  * installation des pilotes (32 & 64 bits) depui le menu 'Outils'
+  * ouverture du dossier 'drivers' depuis Outils > Localiser
+  * détection des cartes et menu déroulant du bon port COM
+
+Une interface pour tout gérer ! Enfin simplifié, tout est rassemblé dans ce panneau de commande :
+
+[[https://raw.githubusercontent.com/technologiescollege/s2a_fr/portable/aide/Capture_exe.JPG|{{https://raw.githubusercontent.com/technologiescollege/s2a_fr/portable/aide/Capture_exe.JPG?nolink&492x246}}]]
+
+<font 18px/inherit;;inherit;;inherit>** Lien de téléchargement : https://github.com/technologiescollege/s2a_fr]]  **</font>
+
+
+===== Scratch : blocs de l'extension s2a =====
+
+[[https://raw.githubusercontent.com/technologiescollege/s2a_fr/portable/aide/scratch_blocks.png|{{https://raw.githubusercontent.com/technologiescollege/s2a_fr/portable/aide/scratch_blocks.png?nolink&530x646}}]]
+
+===== Snap! : blocs de l'extension s2a =====
+
+[[https://raw.githubusercontent.com/technologiescollege/s2a_fr/portable/aide/snap_blocks.png|{{https://raw.githubusercontent.com/technologiescollege/s2a_fr/portable/aide/snap_blocks.png?nolink&532x579}}]]

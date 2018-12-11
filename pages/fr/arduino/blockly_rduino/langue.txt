@@ -1,0 +1,29 @@
+Vous pouvez changer la langue par défaut (actuellement en anglais) en éditant une simple ligne.
+
+Il vous faut ouvrir avec un éditeur de texte le fichier <font inherit/inherit;;#0000FF;;inherit>** code.js  **</font>    qui est situé dans **/lang ** et descendre aux alentours de la ligne 100 pour trouver ce paragraphe :
+<code>
+/**
+* Get the language of this user from the URL.
+* @return {string} User's language.
+*/
+Code.getLang = function() {
+var lang = Code.getStringParamFromUrl('lang', '');
+if (Code.LANGUAGE_NAME[lang] === undefined) {
+// Default to English.
+lang = 'en';
+}
+return lang;
+};
+</code>
+
+Comme vous le comprenez rapidement, il faut changer la ligne :
+
+<code>
+lang = 'en';
+</code>
+
+en
+
+<code>
+lang = 'fr';
+</code>

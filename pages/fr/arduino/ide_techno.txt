@@ -1,0 +1,16 @@
+IDE Arduino identique à l'original en version 1.5.8, mais enrichi de programmes et de librairies nécessaires pour permettre aux enseignants de disposer d'un environnement clé en main pour :
+
+  * installer //FirmataPlus//  et permettre le pilotage par **[[http://scratch.mit.edu/|Scratch2]]** à l'aide de **[[https://github.com/technologiescollege/s2a_fr|s2a]]**
+  * installer le //firmware de chez [[http://www.makeblock.cc/|Makeblock]]// et permettre le pilotage par **[[http://learn.makeblock.cc/learning-scratch/|Scratchbot]]**
+  * installer les //shellMega ou Uno//  permettant la communication avec le logiciel **Organigram**, de la société [[http://www.technozone51.fr/|TechnoZone51]]
+  * exécuter une version d'**Ardublock**  enrichie, entre autres, des pièces vendues par la société [[http://www.duinoedu.com/|DuinoEdu]] et de celles de chez [[http://www.makeblock.cc/|Makeblock]]
+
+{{  https://github.com/technologiescollege/arduino/raw/master/lib/about.jpg?direct&382x221  }}
+
+<font 18px/inherit;;inherit;;inherit>** Lien de téléchargement : https://github.com/technologiescollege/arduino/]]  **</font>
+
+<font 18px/inherit;;inherit;;inherit>Ci-dessous une vidéo qui résume l'installation et l'utilisation de l'IDE Arduino</font>
+
+<html>
+
+<iframe src="//player.vimeo.com/video/104632939?title=0&byline=0&portrait=0" width="750" height="555" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </html> //

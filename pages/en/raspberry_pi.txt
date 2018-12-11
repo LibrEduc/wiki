@@ -1,0 +1,28 @@
+Le Raspberry Pi est un nano-ordinateur monocarte à processeur ARM conçu par le créateur de jeux vidéo David Braben, dans le cadre de sa fondation Raspberry Pi.
+
+
+Cet ordinateur, qui a la taille d'une carte de crédit, permet l'exécution de plusieurs variantes du système d'exploitation libre GNU/Linux et des logiciels compatibles. Il est fourni nu (carte mère seule, sans boîtier, alimentation, clavier, souris ni écran) dans l'objectif de diminuer les coûts et de permettre l'utilisation de matériel de récupération.
+
+
+Cet ordinateur est destiné à encourager l'apprentissage de la programmation informatique. Il est cependant suffisamment ouvert (ports USB et réseau) et puissant (ARM 700 MHz, 256 Mo de mémoire vive pour le modèle d'origine, 512 Mo sur les dernières versions) pour permettre une grande palette d'utilisations. Son circuit graphique BMC Videocore 4 en particulier permet de décoder des flux Blu-Ray full HD (1080p 30 images par seconde), d'émuler d’anciennes consoles et d'exécuter des jeux vidéo relativement récents.
+
+
+{{:raspberrypi.jpg?nolink&280x187}}
+
+
+[[:deporter_affichage_vnc|Déporter son affichage avec VNC]]
+
+
+[[:video_surveillance_rpi|Vidéo Surveillance avec Raspberry Pi]]
+
+
+[[:timelapse|Timelapse avec le module Caméra]]
+
+
+[[:mjpg-streamer|Flux vidéo avec Mjpg-streamer]]
+
+
+[[:auto_hotspot_wifi_raspberry|Auto hotspot wifi]]
+
+
+~~COMPLEX_TABLES~~

@@ -1,0 +1,65 @@
+Tutoriel inspiré par [[http://tiptopboards.free.fr/|http://tiptopboards.free.fr]]
+
+La <font inherit/inherit;;inherit;;inherit>manette de télécommande Ninchuck Wii</font>    peut servir à contrôler une carte Arduino.\\
+\\
+**<font 150% line-height: 116%/inherit;;inherit;;inherit>Composants utilisés</font>    **
+  * 1 Carte Arduino uno R3
+  * 1 [[http://tiptopboards.com/217-manette-de-jeu-nunchuck-pour-nintendo-wii-ou-montages-%C3%A9lectroniques.html|Manette Wii Nunchuck]]
+  * 1 breadboard et fils de câblage (ou soudures)
+
+ \\ <font 150% line-height: 116%/inherit;;inherit;;inherit>La manette</font>
+
+  * Un joystick 2 axes X-Y
+  * Un accéléromètre à 3 axes Ax, Ay, Az.
+  * 2 boutons poussoirs
+
+Cette manette est économique et très ergonomique dans la main. \\ {{https://lh6.googleusercontent.com/-c2gRdAOeQpQ/Ug4pnJIj0oI/AAAAAAAAAJM/acq0FWgqQbQ/w400-h300-no/nunchuck_axes.jpg?nolink&400x300  }}{{https://lh3.googleusercontent.com/-wPOXEvOqgLQ/Ug4plK_KC7I/AAAAAAAAAI0/p6Kh0gCzkZI/w400-h300-no/nunchuck_boutons.jpg?nolink&400x300}} \\ La prise de connexion comporte 5 broches dont 4 sont utilisées \\ {{https://lh4.googleusercontent.com/-bDIcFaUUSJE/Ug4pkav-X7I/AAAAAAAAAIs/4Qa_i-6_tWQ/w400-h300-no/nunchuck_broches.jpg?nolink&}}..{{https://lh6.googleusercontent.com/-FeVvSS14UiE/Ug4pl0Du0bI/AAAAAAAAAI8/R1yWpFv81jk/w400-h300-no/nunchuck_prise.jpg?nolink&}} \\  \\ **<font 150% line-height: 116%/inherit;;inherit;;inherit>Câblage</font>    **  \\ Démonter la prise (2 petites vis à retirer puis déboiter le couvercle) ou couper le câble, et dénuder l'extrémité des 4 fils suivants \\ {{https://lh5.googleusercontent.com/-4JoxDlS6LtA/Ug4pmdNnMWI/AAAAAAAAAJE/2fPtw_MzOj8/w400-h300-no/nunchuck_demontee.jpg?nolink&}} \\  \\ Le démontage du connecteur permet d'identifier les fils en cas de problème. \\ | 1 SDA 3 NC 5 PWR | \\ | 2 GND (4 NC) 6 CLK | \\  \\ Sur notre modèle, la câblage est \\ <font 150% line-height: 116%/inherit;;inherit;;inherit>Couleurs de fil</font>    | <font 150% line-height: 116%/inherit;;inherit;;inherit>Brochage</font>    | \\ 1 blanc, 3 bleu, 5 rouge | SDA Att PWR | \\ 2 rose, 4 rien, 6 jaune | GND nc CLK | \\  \\ **<font 150% line-height: 116%/inherit;;inherit;;inherit>Interfaçage avec la carte Arduino</font>    **  \\  \\ Nunchuck Wii –> Arduino Uno \\ 1 blanc —> <font 150% line-height: 116%/inherit;;inherit;;inherit>SDA</font>    (pin 4) \\ 2 rose –> <font 150% line-height: 116%/inherit;;inherit;;inherit>GND</font>     \\ 3 fil bleu –> non utilisé \\ 4 nc –>non utilisé \\ 5 rouge –> <font 150% line-height: 116%/inherit;;inherit;;inherit>PWR</font>    3.3V \\ 6 jaune –> <font 150% line-height: 116%/inherit;;inherit;;inherit>CLK</font>    (pin5) \\  \\ Important, alimentation sous 3.3V et pas plus ! \\  \\ Pour une manette Wii "officielle" le câblage est le suivant \\ 1 rouge +3V –>PWR 3.3V \\ 2 jaune CLK –>SCL pin5 \\ 3 fil orange –> \\ 4 pas de fil –> \\ 5 vert DATA –>SDA pin 4 \\ 6 blanc GND –>GND \\  \\ **<font 150% line-height: 116%/inherit;;inherit;;inherit>Librairie à installer</font>    **  \\ Une librairie pour l'IDE 1.0 est disponible (Cf [[http://forum.arduino.cc/index.php?topic=84267.0|forum Arduino]]). Cette librairie a été développée par Gabriel Bianconi. Elle est en téléchargement ici (GitHub sous Creative Commons license) {C}[[https://github.com/GabrielBianconi/ArduinoNunchuk|https://github.com/GabrielBianconi/ArduinoNunchuk]]{C} \\
+ \\
+**<font 150% line-height: 116%/inherit;;inherit;;inherit>Utilisation de la librairie</font>    **  \\ On l'installe en copiant le dossier complet "ArduinoNunchuk" dans le répertoire qui comporte déjà les autres librairies Arduino (Arduino/libraries). \\ Ce dossier contient
+
+  * ArduinoNunchuk.cpp
+  * ArduinoNunchuk.h
+  * un sous dossier exemples
+
+ \\ Elle est très simple à utiliser. On commence par instancier :
+
+''ArduinoNunchuk nunchuk = ArduinoNunchuk();''
+
+ \\ Puis on initialise dans le setup
+
+''nunchuk.init();''
+
+ \\ Puis on récupère les mises à jour de la Wii dans la boucle loop()
+
+''nunchuk.update();''
+
+ \\ Les 7 données de la Wii Nunchuk sont disponibles sous cette forme
+
+  * nunchuk.analogX
+  * nunchuk.analogY
+  * nunchuk.accelX
+  * nunchuk.accelY
+  * nunchuk.accelZ
+  * nunchuk.zButton
+  * nunchuk.cButton
+
+ \\ **<font 150% line-height: 116%/inherit;;inherit;;inherit>Exemple de code</font>    **
+
+Code :
+
+''/*ArduinoNunchukDemo.ino \\ * Copyright 2011-2013 Gabriel Bianconi, [[http://www.gabrielbianconi.com/|http://www.gabrielbianconi.com/]] \\
+* Project URL: [[http://www.gabrielbianconi.com/projects/arduinonunchuk/|http://www.gabrielbianconi.com/projects/arduinonunchuk/]] \\
+* Commentaires ajoutes 16 08 2013 tiptopboards.com \\
+*/ \\
+ \\
+#include <Wire.h> \\
+#include <ArduinoNunchuk.h> \\
+ \\
+#define BAUDRATE 19200 \\
+//Instancier la manette Wii Nunchuck \\
+ArduinoNunchuk nunchuk = ArduinoNunchuk(); \\
+ \\
+void setup() \\
+{ \\
+Serial.begin(BAUDRATE); \\
+nunchuk.init(); // Initialiser la Nunchuck \\ } \\  \\ void loop() \\ { \\  \\ nunchuk.update(); //lecture des donnees //  \\ Joystick XY \\ Serial.print(nunchuk.analogX, DEC); //0-255 X, 125 au neutre \\ Serial.print(' '); \\ Serial.print(nunchuk.analogY, DEC); \\ Serial.print(' '); //  \\  \\ Accelerometre XYZ \\ Serial.print(nunchuk.accelX, DEC); \\ Serial.print(' '); \\ Serial.print(nunchuk.accelY, DEC); \\ Serial.print(' '); \\ Serial.print(nunchuk.accelZ, DEC); \\ Serial.print(' '); \\  \\ //Deux boutons de la Nunchuck Wii \\ Serial.print(nunchuk.zButton, DEC); \\ Serial.print(' '); \\ Serial.println(nunchuk.cButton, DEC); \\ }'' //'' //'' //''

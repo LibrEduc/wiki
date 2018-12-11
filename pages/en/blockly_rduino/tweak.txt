@@ -1,0 +1,31 @@
+====== 1 - How to choose the default card to Arduino MEGA ======
+
+You have to edit the file:
+
+<file>
+/generators/arduino/blocklyduino.js
+</file>
+
+<font 16px/inherit;;inherit;;inherit>and modify the  // line 93:  //</font>
+
+<font 16px/inherit;;inherit;;inherit>'' profile["default"] = profile["arduino_uno"];  ''</font>
+
+<font 16px/inherit;;inherit;;inherit>changing  ** arduino_uno  ** by  ** arduino_mega.  **</font>
+
+
+====== 2 - How to choose the default blocks categories ======
+
+<font 16px/inherit;;inherit;;inherit>You have to modify the file  '' /utils/blocklyDuino.js  '' at  // line 479.  //</font>
+
+<font 16px/inherit;;inherit;;inherit>You can find the list of blocks categories at  '' LoadIds =  '' line:</font>
+
+<code>
+// set the default toolbox if none in session
+if (loadIds === undefined || loadIds === "") {
+loadIds = "CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_TEXT,CAT_ARDUINO,CAT_TECHNOZONE";
+window.sessionStorage.toolboxids = loadIds;
+}
+</code>
+
+<font 16px/inherit;;inherit;;inherit>You can find the categories list name to write at line  ** LoadIds  ** in the file  '' index.html  '' starting  // line 246  // in  '' "toolboxes definitions"  '' .</font>
+

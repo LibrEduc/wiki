@@ -1,0 +1,83 @@
+====== La notion de maquette ======
+
+L'idée est non pas de définir une carte sur laquelle les enfants vont venir connecter des éléments, mais plutôt de préparer un environnement prêt à l'emploi où les connectiques ne changent pas et odnc les catégories de blocs non plus.
+
+===== Exemple : maquette de micro-feux Jeulin =====
+
+Choix de la "carte" sur laquelle est connectée la maquette, depuis la fenêtre de configuration globale :
+
+{{:fr:arduino:blockly_rduino:image_2.jpg?nolink&612x533}}
+
+L'environnement change en conséquence :
+
+{{:fr:arduino:blockly_rduino:image_1.jpg?nolink&472x483  }}Le bouton "//configurer les blocs//" est devenu "//configurer la maquette//" car l'enseignant pourra renseigner une adresse URL (**locale en file:\ ou sur le web en http:\ **) pour guider le câblage par les élèves.
+
+Le menu des blocs et catégories est imposé.
+
+
+====== Déclarer sa maquette ======
+
+==== 1. Définir le menu ====
+
+Tout d'abord il s'agit de se créer un menu (ou toolbox) à partir de celles déjà existantes dans le dossier '**\tootlbox**' en ** commençant le nom du menu OBLIGATOIREMENT par "kit_xxx" **.
+
+====   ====
+
+==== 2. Déclarer le menu ====
+
+Dans le fichier '**index.html**', à la ligne 550 apparaît la liste des cartes :
+<code>
+<select id="pinout" onmousemove="BlocklyDuino.cardPicture_change_AIO();" onchange="BlocklyDuino.cardPicture_change_AIO();">
+    <option value="none">...</option>
+    <option value="arduino_leonardo">Arduino/Genuino LEONARDO</option>
+    <option value="arduino_mega">Arduino/Genuino MEGA</option>
+    <option value="arduino_micro">Arduino/Genuino MICRO</option>
+    <option value="arduino_nano">Arduino/Genuino NANO</option>
+    <option value="arduino_uno">Arduino/Genuino UNO</option>
+    <option value="arduino_yun">Arduino/Genuino YUN</option>
+    <option value="dfrobot_romeo">DFRobot RoMeo v2</option>
+    <option value="kit_microfeux">Micro-feux Jeulin</option>
+</select>
+</code>
+
+A vous de rajouter la ligne de votre maquette en définissant un **identifiant identique à celui du nom du fichier des menus** (//la toolbox//).
+====   ====
+
+==== 3. Décrire la maquette ====
+
+Pour l'instant, rien de concret ne va se passer si vous cliquez sur la carte ainsi créée. En effet, il s'agit d'une carte qui n'est pas encore définie donc il va falloir ouvrir le fichier "**\core_BlocklyArduino\blockly@rduino_boards.js**" pour y insérer la description de la connectique de la maquette.
+
+Dès la début du fichier vous trouverez des définitions de cartes, à vous de les copier-coller pour les modifier :
+
+<code>
+    kit_microfeux: {
+        description: "Micro-feux Jeulin",
+        digital: ["1",  "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
+        dropdownDigital: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"]],
+        PWM : ["3", "5", "6", "9", "10", "11"],
+        dropdownPWM: [["3", "3"], ["5", "5"], ["6", "6"], ["9", "9"], ["10", "10"], ["11", "11"]],
+        analog : ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7"],
+        dropdownAnalog: [["A0", "A0"], ["A1", "A1"], ["A2", "A2"], ["A3", "A3"], ["A4", "A4"], ["A5", "A5"]],
+        /*irqonchange: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"],["A0", "14"], ["A1", "15"], ["A2", "16"], ["A3", "17"], ["A4", "18"], ["A5", "19"]],*/
+        I2C: ["A4", "A5"],
+        SPI: [["10 (SS)", "10"], ["11 (MOSI)", "11"], ["12 (MISO)", "12"], ["13 (SCK)", "13"]],
+        interrupt: ["2", "3"],
+        picture : "media/microfeuxJeulin.jpg",
+        miniPicture : "media/microfeuxJeulin.jpg",
+        serial: [['300', '300'], ['600', '600'], ['1200', '1200'],
+                ['2400', '2400'], ['4800', '4800'], ['9600', '9600'],
+                ['14400', '14400'], ['19200', '19200'], ['28800', '28800'],
+                ['31250', '31250'], ['38400', '38400'], ['57600', '57600'],
+                ['115200', '115200']],
+        serialPin: [["0 (Rx)", "0"], ["1 (Tx)", "1"]],
+        upload_arg: "arduino:avr:uno",
+        help_link: "https://www.qwant.com/?q=microfeux%20jeulin&t=all",
+    },
+</code>
+
+**ATTENTION aux virgules !**
+
+<font inherit/inherit;;inherit;;#FFFF00>N'oubliez pas de créer les deux photos à afficher et de les placer dans le dossier "**\**</font>**<font inherit/inherit;;inherit;;#FFFF00>media</font>**<font inherit/inherit;;inherit;;#FFFF00>".</font>
+
+<font inherit/inherit;;inherit;;#FFFF00>**Pour les maquettes (kit_) uniquement**, vous devez renseigner une adresse URL pour aider les élèves à câbler, il s'agit de la ligne "**//help_link//**".</font>
+

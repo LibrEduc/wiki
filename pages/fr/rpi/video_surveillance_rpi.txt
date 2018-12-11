@@ -1,0 +1,95 @@
+Vidéo Surveillance avec Raspberry Pi
+
+
+Le but est de créer un centre de contrôle vidéo permettant d’analyser chaque détection de mouvement et de diffuser en temps réel.
+
+
+On obtient ainsi un système de vidéo-surveillance avec enregistrement des moments "intéressants".
+
+
+Il vous faut pour cela une simple webcam que vous connectez à une des ports USB du Raspberry.
+
+
+Il vous faut aussi une connexion réseau. Puis vous pouvez lancer votre Raspberry Pi.
+
+
+Toutes les webcams ne sont pas reconnues, il faut donc vérifier avec la commande :
+
+
+$ lsusb
+
+
+{{:image10.png?nolink&500x402}}
+
+
+Ma webcam est bien détectée avec aucune erreur « Logitech, Inc. Webcam C200 ».
+
+
+Vous allez commencer par installer l'utilitaire motion :
+
+
+- diffuser de manière continue le flux vidéo sur un mini serveur web\\ 
+- enregistrer les moments où il y a du mouvement et les coller "bout à bout" pour ainsi créer plusieurs petites vidéos.
+
+
+Saisir la commande :
+
+
+$ sudo apt-get install motion
+
+
+On va créer un dossier dans lequel les informations et instantanés seront archivées :
+
+
+$ mkdir /home/pi/motion\\ 
+$ chmod 755 /home/pi/motion
+
+
+Passons à la configuration de notre paquet Motion\\ 
+La configuration se passe dans motion. Saisir la commande :\\ 
+\\ 
+$sudo nano /etc/motion/motion.conf
+
+
+Dans ce fichier quelques paramètres sont à modifier en fonction de la webcam pour un fonctionnement basique et autonome (Sachant que chaque réglage est expliqué par des balises).
+
+
+Pour ma part, j'ai modifié uniquement ces lignes :
+
+
+//daemon on\\ 
+process_id_file /home/pi/motion/motion.pid\\ 
+width 640\\ 
+height 480\\ 
+framerate 15// 
+
+
+//webcam_quality 75\\ 
+webcam_motion on\\ 
+webcam_localhost off// 
+
+
+//ffmpeg_cap_new off// 
+
+
+Le daemon (service) motion est désactivé par défaut, pour l'autoriser :
+
+
+# sudo nano /etc/default/motion
+
+
+Modifier start_motion_daemon=yes
+
+
+Maintenant lancer l'application motion en Super User pour que le flux http soit actif\\ 
+\\ 
+$ sudo motion
+
+
+La mise en service de base est faite, le flux de la webcam se fait en pointant sur http://ip_du_RPi:8081 de votre navigateur.
+
+
+Ce programme est ultra paramétrable, aussi je conseille de prendre le temps de lire le man motion afin d'exploiter toutes ses nombreuses possibilités.
+
+
+~~COMPLEX_TABLES~~

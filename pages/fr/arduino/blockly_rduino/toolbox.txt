@@ -1,0 +1,77 @@
+====== Créer son propre menu ======
+
+La '//toolbox//' c'est le petit nom du **menu de gauche** qui regroupe les **catégories ** de blocs à utiliser.
+
+{{:fr:arduino:blocklyduino:cat.jpg?nolink&726x275}}
+
+Les **blocs ** sont ensuite dans la colonne qui se déplie :
+
+{{:fr:arduino:blocklyduino:blocs.jpg}}
+
+Définir une //toolbox//, c'est nourrir un fichier xml qui regroupe tous les noms des catégories & blocs qui la peuplent.
+
+Exemple du **fichier toolbox_vide.xml** :
+<code>
+<?xml version="1.0" encoding="utf-8" ?>
+<toolbox>
+    <parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS
+    </parametre>
+    <category name="CAT_LOGIC" colour="#E1A91A">
+        <block type="controls_if"></block>
+        <block type="controls_switch"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_null"></block>
+    </category>
+    <category name="CAT_LOOPS" colour="#C88330">
+</code>
+
+On retrouve là les informations de la page '[[:fr:arduino:blockly_rduino:creerblocsmulti|créer ses blocs multilingues]]', donc passons à la suite : augmenter la liste dans le fichier **index.html**
+
+Pour cela ouvrir le fichier et chercher le paragraphe suivant :
+
+<file>
+<!-- toolbox config modal -->
+<div class="modal fade" id="configModal" tabindex="-1" role="dialog" aria-labelledby="configModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="configModalLabel"></h4>
+      </div>
+        <div id="divToolbox">
+            <label id="labelToolboxDefinition"></label>
+            <select id="toolboxes">
+                <option value="toolbox_vide" selected="selected">Algo simple</option>
+                <option value="toolbox_arduino_all">Arduino tous blocs</option>
+            </select>
+        </div>
+      <input type="checkbox" name="select_all" id="select_all"/> <span id="span_select_all"> </span>
+      <div style="float : right; margin-right : 5px;">
+            <input type="checkbox" name="put_in_url" id="put_in_url"/> <span id="span_put_in_url"> </span>
+      </div>
+
+      <div class="modal-body" id="modal-body-config"></div>
+      <div class="modal-footer">
+        <button id="btn_close_config" type="button" class="btn btn-default" data-dismiss="modal"></button>
+        <button id="btn_valid_config" type="button" class="btn btn-primary"></button>
+      </div>
+    </div>
+  </div>
+</div>
+</file>
+
+Rajouter une ligne avant ou après " **<option value="toolbox_arduino_all">Arduino tous blocs</option>** ", sous la ligne " **<select id="toolboxes">** ".
+
+Le champ //value // doit contenir le nom **exact ** du fichier de //toolbox //à utiliser, la suite est le nom qui apparaît dans le menu déroulant :
+
+{{:fr:arduino:blocklyduino:choix_cat.jpg?nolink&659x405}}
+
+====== Utilisateurs de Chrome/Chromium ======
+
+L'externalisation des //toolbox // dans des fichiers //xml // hors du fichier '**index.html**' n'est pas possible si vous n'avez pas résolu le problème de requête Ajax qui s'affiche lorsque vous voulez choisir les catégories de blocs.
+
+Dans ce cas, il faut //__**tout **__//remettre dans le fichier '**index.html**' comme dans le fichier exemple **'index_chrome.html**'.
+

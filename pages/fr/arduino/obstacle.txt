@@ -1,0 +1,11 @@
+Ce détecteur infra-rouge possède donc 2 diodes : émission & réception. C'est un détecteur d'obstacles : celle-ci renvoie un signal numérique, tout-ou-rien, si un obstacle est détecté MAIS vous pouvez régler la distance de seuil de déclenchement.
+
+Dans le détail :
+
+  - la carte "mesure" la distance,
+  - le potentiomètre sert à régler le seuil de déclenchement de la sortie, c'est à dire la distance à laquelle vous voulez déclencher le passage de 0 à 1,
+  - il suffit de connecter la broche OUT sur une entrée **numérique **  (//Digital//) de votre Arduino.
+
+**Démonstration :**
+
+<html><iframe width="853" height="480" src="//www.youtube-nocookie.com/embed/BVkKX_2JCXk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></html>

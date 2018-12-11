@@ -1,0 +1,32 @@
+Este wiki está destinado a compartir / aunar las bases documentación / conocimiento alrededor de hardware tales como interfaces de Arduino y el Raspberry Pi (RPI ), y también en el famoso software de control de [[:scratch|Scratch]].
+
+{{http://arduino.cc/en/uploads/Main/ArduinoMega2560_R3_Front_450px.jpg?nolink&313x220}}{{http://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Raspberry_Pi_Model_B_Rev._2.jpg/640px-Raspberry_Pi_Model_B_Rev._2.jpg?nolink&324x220}}{{:576px-scratchcat.svg.png?nolink&206x220}}
+
+Todo el
+wiki
+se
+licencia CC
+y
+pretende dar respuesta a
+todas las preguntas
+posibles
+, con ejemplos de  **aplicaciones educativas**,
+no estamos aquí solo con la dea de la tecnica por la tec¡nica estos materiales queremos que nos sirvan a todos para interaccionar con el mundo real
+.
+
+<font inherit/inherit;;inherit;;inherit>Ejemplos de</font> <font inherit/inherit;;inherit;;inherit></font> <font inherit/inherit;;inherit;;inherit>tarjetas</font> <font inherit/inherit;;inherit;;inherit></font> <font inherit/inherit;;inherit;;inherit>especialmente</font> <font inherit/inherit;;inherit;;inherit></font> <font inherit/inherit;;inherit;;inherit>adecuados</font> <font inherit/inherit;;inherit;;inherit>:</font>
+
+**[[:arduino|Shield Easycon para arduino - domotica y robotica para la educación]]**
+
+{{  :presentation:interface_1_2.jpg?nolink&600x414  }}
+
+**[[:piface|Shield PiFace para RaspberryPi - domotique (o robótica báscia) en la educacion primaria]]**
+
+{{  :presentation:piface-digital-diag.jpg?nolink&600x461  }}
+
+**[[:pirocon|Shield PiRoCon pour Raspberry - domotique et robotique dès le primaire]]**
+
+{{  :presentation:2.jpg?nolink&600x480  }}
+
+**[[:liens|Liens externes et ToDoList.]]**
+

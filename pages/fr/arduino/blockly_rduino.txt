@@ -1,0 +1,70 @@
+Blockly@rduino est un programme web, un **webware graphique permettant la programmation graphique pour [[http://www.arduino.cc/|Arduino]] et sa //traduction en code//**.
+
+{{  https://raw.githubusercontent.com/technologiescollege/Blockly-at-rduino/master/documentation/CaptureEN.JPG?nolink&591x388  }}
+
+Blockly@rduino est basé sur [[https://developers.google.com/blockly/|Blockly]], un éditeur de programme graphique par une interface web. Il fournit un seul type de traduction de la programmation graphique //(contrairement à Blockly qui traduit en Python, en JavaScript, etc et permet de le simuler en ligne : [[http://www.technologiescollege.fr/blockly/apps/code/index.html|exemple]])//, pour générer du code à copier coller dans l'IDE Arduino.
+
+Blockly@rduino possède ​**de nombreuses ​**bibliothèque de blocs pour les modules Grove, ​TechnoZone51,​ DFRobot, etc** **particulièrement ​adaptées **​**à la découverte des micro-contrôleurs et aux expérimentations de systèmes mécatroniques.
+
+Cette version a été françisée et réorganisée pour la faire utiliser au mieux par des élèves débutants dans le code.
+
+**//Toutes les remarques sont les bienvenues pour améliorer la syntaxe !// **
+
+<font 18px/inherit;;inherit;;inherit>**Lien de téléchargement : **</font>**[[https://​github.com/​technologiescollege/​Blockly-at-rduino|https://​github.com/​technologiescollege/​Blockly-at-rduino]]**
+
+===== Fonctions =====
+
+  * programmation pour Arduino en drag'n'drop graphique,
+  * génère un code totalement compatible avec le code Arduino,
+  * interaction des cartes Arduino grâce aux modules Grove rajoutés : plus de 10 blocs spécifiques à des capteurs/actionneurs Grove,
+  * possibilité de charger automatiquement des fichiers sur le site grâce aux paramètres de l'adresse URL //(voir les démos ci-dessous).//
+
+===== IMPORTANT Arduino =====
+
+Pour le téléversement dans la carte Arduino directement depuis le navigateur, il faut installer le plugin Codebender : [[https://codebender.cc/static/plugin|https://codebender.cc/static/plugin ]] ​**ou bien copier-coller le code produit dans l'EDI Arduino ([[https://​github.com/​technologiescollege/​arduino|https://​github.com/​technologiescollege/​arduino]]).**
+
+===== Démos =====
+
+Blockly@rduino est un outil web, un webware par référence aux software, hardware, etc. Vous pouvez le tester/utiliser à l'adresse suivante :
+
+[[http://​technologiescollege.github.io/​Blockly-at-rduino|http://​technologiescollege.github.io/​Blockly-at-rduino]]
+
+Vous pouvez donc aussi lier directement l'ouverture de la page à l'ouverture d'un fichier XML hébergé (//ou tout en local//) :
+
+   * [[http://​technologiescollege.github.io/Blockly-at-rduino/​index.html?​lang=fr&​url=./examples/./blink/​blink.xml|démo 1 : faire clignoter une diode]]
+  * [[http://​technologiescollege.github.io/Blockly-at-rduino/​index.html?​lang=fr&​url=./examples/./servo_potentio/​servo_potentio.xml|démo 2 : faire varier un servo-moteur proportionnellement à une consigne de potentiomètre]]
+
+Le créateur de BlocklyDuino a aussi posté une [[http://www.youtube.com/watch?v=_swiyXcUvNY|vidéo]].
+
+
+===== Utiliser en local dans son navigateur web =====
+
+Si vous préférez l'utiliser en local, il vous suffit de télécharger le code depuis Github (//[[https://github.com/technologiescollege/BlocklyDuino/archive/master.zip|Download Zip]]//) et d'ouvrir le fichier ''index.html'' dans votre navigateur ​**(<font inherit/inherit;;#FF0000;;inherit>de préférence Firefox</font>​)**.
+
+Vous pouvez l'héberger sur un serveur, et ainsi y faire accéder de nombreux postes en pointant vers ce fichier 'index.html'.
+
+
+===== Utilisation en 5 temps =====
+
+  - utiliser votre navigateur pour ouvrir Blockly@rduino grâce au fichier 'index.html'
+  - sélectionner la carte et la catégorie de blocs que l'on veut utiliser
+  - créer son programme Arduino par drag'n'drop (//cliqué-déplacé//) des blocs
+  - sélectionner l'onglet 'Arduino' pour en copier le contenu dans l'[[https://github.com/technologiescollege/arduino|IDE]][[https://github.com/technologiescollege/arduino| Arduino]]
+  - presser le bouton 'Téléverser' pour transférer le code dans la mémoire de la carte Arduino
+
+
+===== Auteurs et contributeurs =====
+
+Fred Lin (@gasolin). Merci à Neil Fraser, Q.Neutron de Blockly [[http://code.google.com/p/blockly/|http://code.google.com/p/blockly/]]. Merci à l'équipe d'Arduino et Seeeduino pour les blocs spécifiques. Ce projet s'est aussi inspiré de [[https://github.com/taweili/ardublock|arduiblock]] et [[http://www.modk.it/|modkit]]. Améliorations par Julien Rat. Modifications, simplifications et françisation par Sébastien Canet. Fonctionnalités accrues par Olivier Métayer.
+
+Au début des temps il y a eu [[http://education.mit.edu/portfolio_page/starlogo-tng/|StarLogo]], qui a influencé MIT Scratch1 (//dont la fameuse 1.4 qui a servi de base au fameux S4A, mais pour cela il leur a fallu taper dans le code//), puis une autre équipe MIT a créé le [[http://appinventor.mit.edu/explore/|MIT App Inventor]] pour les applications Android, ce qui a influencé la création de [[https://developers.google.com/blockly/|Blockly]].\\
+L'idée est de fournir la base d'une programmation visuelle à une traduction vers du code (Python, Java, etc) ou autre chose….\\
+ils sont même allés jusqu'à proposer un créateur graphique de blocs : [[https://developers.google.com/blockly/custom-blocks/block-factory|https://developers.google.com/blockly/custom-blocks/block-factory]]
+
+Du coup, un bidouilleur appelé Gasolin a créé le premier projet autour de Blockly en [[https://github.com/gasolin/BlocklyDuino|BlocklyDuino]]. Mais comme il ne faisait plus de mises à jour, ne répondait pas aux mails, je suis reparti de la dernière version de Blockly (je ne suis pas le seul, vous trouverez plein de projets identiques sur le web), j'ai intégré du code de Gasolin, j'ai pris quelques bières et hop ! J'ai appelé un pote à la rescousse pour l'aspect graphique, et hop 2 ! C'est encore en chantier, mais fonctionnel.
+
+Pour du virtuel pur, il y aurait un gros travail d'interception de code et de conception graphique….c'est dans une future TODO-list….\\
+Pour l'instant un fichier (le fameux compilerflasher.js) intercepte le code et l'envoie au site [[https://codebender.cc/|CodeBender]] grâce au plugin de ton navigateur :\\
+Blockly → bloc graphique → compilerflasher.js → plugin codebender → site codebender → code Arduino → carte Arduino\\
+Qu'un site extérieur accède à votre matériel représente un peu une faille de sécurité…donc le Graal actuel sur lequel tout le monde bosse est un pseudo-codebender local.
+

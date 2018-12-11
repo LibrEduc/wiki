@@ -1,0 +1,25 @@
+====== Parcours destiné à des débutants de 12 ans et plus . ======
+
+Ceux-ci vont utiliser tous les capteurs/actionneurs classiques afin de **créer leur propre projet**.
+
+Afin de favoriser au maximum les découvertes et de tout comprendre, on voit tous les éléments en quelques séances (après tout la logique est assez similaire et graduelle) et cela laisse le temps en 2 semaines au FabLab de créer les pièces.
+
+{{:fr:parcourspeda:20170707_180626.jpg?nolink&864x648}}
+
+{{:fr:parcourspeda:20170727_182930.jpg?nolink&680x510}}
+
+Suivez aussi les sous-rubriques ci-dessous :
+
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique25|1er contact avec Scratch]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique39|un bidule que je fais clignoter]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique50|ce qu’il faut retenir]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique41|un bidule que je fais varier]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique51|ce qu’il faut comprendre]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique52|un bidule que j’oriente dans les 3 dimensions]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique53|un bidule que je commande au doigt et à l’oeil]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique45|pour résumer]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique46|un bidule que je module]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique47|bip....bip....bip..bip..bip.bip.bipbipbibp]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique48|un bidule que je télécommande]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique54|un bidule tout fait ?]]
+

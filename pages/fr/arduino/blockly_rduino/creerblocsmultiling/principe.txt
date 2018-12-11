@@ -1,0 +1,23 @@
+===== Pour créer des blocs, voici la démarche en prenant pour exemple la FlyCamOne. =====
+
+==== Le principe : ====
+
+  - le dossier '**\blocks\**' contient un sous-dossier par fabricant afin d'y stocker les images et fichiers de scripts.
+      - {{:fr:arduino:blockly_rduino:6830b8addb48051619c824587d606b15.png}}
+  - un fichier **'\blocks\<font inherit/inherit;;#0000FF;;inherit>fabricant</font>\<font inherit/inherit;;#0000FF;;inherit>fabricant.js</font>'**  va décrire le nom de chaque bloc et de quelle façon Blockly va le dessiner à l'écran. Comme nous allons créer des blocs multilingues, //**aucun texte pour l'utilisateur ne doit être tapé dans ce fichier**, ils seront dans des fichiers de traduction//.
+      - {{:fr:arduino:blockly_rduino:e7b3edc282af53cbfa0bd487de91410e.png}}
+      - On lit là tout ce qui constitue le bloc. Enfin on lit surtout qu'on ne lit rien…tout ce qui sera utilisé est défini dans différents fichiers qui contiennent les valeurs des variables comme Blockly.Blocks.bq.HUE, Blockly.Msg.BQ_HELPURL, etc. Toutes ces variables seront expliqués par la suite, donc** il est important de parcourir toute cette documentation pour comprendre la mécanique globale de Google Blockly**.
+  - un fichier **'\blocks\<font inherit/inherit;;inherit;;#FFFF00>blocks</font><font inherit/inherit;;inherit;;#FFFF00>_colors.js</font>'**  va contenir toutes les valeurs en hexadecimal des couleurs à utiliser. Par cohérence pour les utilisateurs, il vaut mieux que **la couleur de la catégorie (//définie dans le fichier toolbox expliqué plus bas//) soit la même pour tous les blocs de la catégorie**  :
+      - {{:fr:arduino:blockly_rduino:632e27eb573db2b6d317115786bfb736.png}}
+  - un fichier **'\generators\<font inherit/inherit;;#FF0000;;inherit>fabricant.js</font>'**  va utiliser les éléments décrits dans la définition graphique du bloc (//voir point précédent//) pour enrichir un texte qui sera le code en langage Arduino à produire.
+      - {{:fr:arduino:blockly_rduino:0c026b0304e5ebfb9fe465983ba0eef7.png}}
+      - {{:fr:arduino:blockly_rduino:49d03500030904530249d5c8b489e3eb.png}}
+  - le fichier '**\blocks\<font inherit/inherit;;#FF8C00;;inherit>blocks_typing.js</font>'**  va contenir le typage de chacun des blocs que vous avez créé, c'est à dire s'il renvoie une valeur de type entier (int) ou chiffre à virgule (float) ou…
+      - {{:fr:arduino:blockly_rduino:65b5b82104c1ad111d4ee129f21877b7.png}}
+  - les fichiers **'\lang\blocks\<font inherit/inherit;;#800080;;inherit>fr.js</font>' & '\lang\blocs\<font inherit/inherit;;#800080;;inherit>en.js</font>'**  vont contenir toutes les chaînes de caractère que l'utilisateur lira.
+      - {{:fr:arduino:blockly_rduino:7a3d28c8c6ff6dd33be663bc94aa7e92.png}}
+      - {{:fr:arduino:blockly_rduino:45d0764d1467ad151804753f0b813927.png}}
+  - le nom de chacun des blocs que vous voulez afficher dans une catégorie à l'écran devra être ajouté dans le menu ad-hoc, ils sont contenus dans le dossier **'\toolbox\'**.
+      - {{:fr:arduino:blockly_rduino:6990a6fb0513efb10dab099ed5b13cab.png}}
+      - {{:fr:arduino:blockly_rduino:25a75b4817a0c2b529a7b4b862af5c1b.png}}
+

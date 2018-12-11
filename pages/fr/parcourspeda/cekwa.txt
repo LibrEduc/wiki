@@ -1,0 +1,16 @@
+L'idée est de proposer des **parcours différents en fonction du niveau de débutants**, ces documents ont été utilisés avec des tranches d'âges différents.
+
+Comment faire ? En lisant, triturant, testant, câblant, fouinant, fabriquant, programmant du matériel dont voici la liste de tout ce qui est abordable par des enfants :
+
+{{  http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/parcourspeda/matos1.jpg?direct&607x811  |matos1.jpg}}
+
+{{  http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/parcourspeda/matos2.jpg?direct&607x811  |matos1.jpg}}
+
+{{  http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/parcourspeda/matos3.jpg?direct&607x811  |matos1.jpg}}
+
+====== Et pour programmer justement ? ======
+
+Il y a évidemment le célébrissime [[https://scratch.mit.edu/|Scratch]]. Mais celui-ci a ses limites car il ne fait que dans le virtuel pur, hors pour interagir avec notre matériel il nous faut quelque chose dédié à ça : [[http://www.mblock.cc/|mBlock]]. Il permet aussi d’aller plus loin en autorisant la transformation du programme en code Arduino, permettant ainsi son téléversement.
+
+[[http://blocklyarduino.technologiescollege.fr/|Enfin pour les plus aguerris il y a le logiciel que je développe : Blockly@rduino]].
+

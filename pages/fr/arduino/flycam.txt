@@ -1,0 +1,76 @@
+===== Le produit =====
+
+Simplifiée au maximum (prise de vue photo et vidéo uniquement), ce modèle n'intègre pas de batterie (mais on peut lui en rajouter une externe) et doit être relié à un récepteur pour pouvoir fonctionner.
+
+Son port micro SD accepte des cartes jusqu'à 8GB et vous permettant alors de réaliser de longues vidéos.
+
+La LED bi colore présente sur le circuit imprimé vous indiquera facilement le mode sélectionné ainsi que le déclenchement de la prise de vue.
+
+{{:fr:arduino:flycam:10.jpg?nolink&344x271  }}- Résolution vidéo : 720×480\\
+- Fonction audio : Oui\\
+- Image/sec : 28fps\\
+- Taille de la tête pivotante : 25x25x28m\\
+- Led : Bi-colore\\
+- Type de carte : Micro SD-Card\\
+- Rayon : 0.3 à l'infini\\
+- Tension : 4.5V-6V\\
+- Consommation : 180Mah\\
+- Objectif : Orientable à 90°\\
+- USB : Mini USB 1.1\\
+- Modes : Vidéo, déclenchement à distance, photo enregistrement à 180° programmable
+
+De 20 à 40€ sur Internet : [[http://www.camonetec.com/de/produkte/kamerasysteme/flycamone-eco-v2.html|http://www.camonetec.com/de/produkte/kamerasysteme/flycamone-eco-v2.html]]
+
+{{:fr:arduino:flycam:1.jpg?nolink&697x213}}
+
+//**{{:fr:arduino:fcoe_v2.pdf|Télécharger la documentation officielle.}}  ** //
+
+
+===== Installation & fixation =====
+
+Connecter le cordon RX à une voie libre de votre récepteur RC (RadioCommande). Une fois connectée, la FlyCamOne eco v2 sera alors alimentée (//voyant vert//) et contrôlée par l’émetteur RC. Toutefois il est possible de connecter la caméra à une batterie externe via le port prévu à cet effet.
+
+La caméra ne peut être commandée par ON/OFF que si elle est raccordée à une batterie externe.
+
+===== Modes d’enregistrement =====
+
+Par défaut, la FlyCam est en mode vidéo au démarrage (LED verte permanente). Les différents modes sont visualisables par la LED :
+
+{{http://tic.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/flycam/2.jpg?direct&873x207}}
+
+**Pour activer ou désactiver l’enregistrement, pressez le bouton de l’émetteur RC.\\
+Pour passer d’un mode à l’autre, vous devez garder le bouton appuyé pendant 3 secondes.**
+
+//Cela fonctionne de la même façon avec le bouton sélecteur du coin de la carte.//
+===== Organigram =====
+
+Il est donc possible de commander cette caméra en activant la carte servo-moteur sur laquelle on la connecte.
+
+On va tout d’abord la basculer en mode ‘photo’ en lui envoyant 2 fois de suite une impulsion servo-moteur de 180° pendant 3s :
+
+{{http://tic.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/flycam/3.jpg?nolink&171x418}}
+
+Puis une fois en mode photo (LED verte clignotante), chaque impulsion servo de 180° va déclencher la prise de photo, comme dans cet exemple où c’est l’appui sur un bouton poussoir qui va déclencher la photo :
+
+{{http://tic.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/flycam/4.jpg?nolink&242x473}}
+
+On peut aussi créer un plugin dédié :
+
+{{http://tic.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/flycam/5.jpg?nolink&237x529}}
+
+On part d’un plugin SERVO1 qu’on copie, puis on modifie quelques paramètres :
+
+{{http://tic.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/flycam/6.jpg?nolink&705x383}}
+
+Toutes les informations sont dans le fichier texte ‘config.ini’ :
+
+{{http://tic.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/flycam/7.jpg?nolink&263x267  }}{{http://tic.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/flycam/8.jpg?nolink&359x369}}
+
+===== Scratch =====
+
+Encore plus facile ! Vous pourrez préparer toute l’initialisation, voire créer des macro pour les routines :
+
+{{http://tic.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/flycam/9.jpg?nolink&869x479}}
+
+**//{{:fr:scratch:flycam.sb2|Télécharger le fichier Scratch2 en exemple.}} // **
+

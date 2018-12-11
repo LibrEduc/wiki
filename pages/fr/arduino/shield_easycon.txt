@@ -1,0 +1,17 @@
+L'utilisation des platines arduino (UNO et MEGA) n'est pas très simple avec des élèves en collège pour connecter des capteurs et actionneurs.
+
+L'entreprise [[http://www.technozone51.fr/|Technozone51]] a donc développé des cartes additionnelles ou shileds pour une connexion plus aisée sur une platine Arduino.
+
+Ces shields se nomment :
+
+- [[:fr:arduino:shield_easycon:easycon1|Easycon1]] et [[:fr:arduino:shield_easycon:easycon2|Easycon2]] pour la platine arduino Mega
+
+|{{:fr:arduino:easycon.jpg?nolink&300x169}} |{{:fr:arduino:easycon1_2.jpg?nolink&300x169}} |
+|Shield Easycon sur une platine Arduino MEGA ||
+
+- Easybot1 pour la platine arduino Uno
+
+|{{:fr:arduino:easybot.jpg?nolink&300x169}} |{{:fr:arduino:easybot1.jpg?nolink&300x169}} |
+|Shield Easybot sur platine Arduino Uno ||
+
+\\

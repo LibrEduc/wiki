@@ -1,0 +1,182 @@
+===== Mais rien n'apparaît ??! C'est normal... =====
+
+En effet, n'ont été créés que les 2 fichiers utiles au fonctionnement de Blockly : le créateur du bloc et le générateur de code. Mais Blockly@rduino ne sait toujours pas que ces fichiers existent et qu'il faut les utiliser, voici dnc comment terminer la procédure.
+
+===== On les appelle =====
+
+Il faut éditer les** <font inherit/inherit;;#ff0000;;inherit>2</font>**  fichiers '**\blocks\arduino_resume.js**' (qui contient la liste de toutes les définitions de blocs dans lesquelles piocher pour les construire) //**<font inherit/inherit;;inherit;;#ffff00>ET</font>**//  '**\generators\arduino_resume.js**' (qui contient la liste de toutes les traductions des blocs en langage Arduino dans lesquelles piocher pour les traduire).
+
+Respectons un peu d'ordre, il suffit de copier une ligne existante et de **changer le dossier ET le nom du fichier** :
+
+   * tout d'abord les définitions du bloc '**\blocks\arduino_resume.js**', autant les mettre par ordre alphabétique du **nom de dossier**//(qui est identique au nom du fichier javascript)//  :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:2ee720c27ba6738120cd0a033e39cd5c.png?563x98}}
+
+  * ensuite faire de même dans la liste '**\generators\arduino_resume.js**' des **générateurs **de code :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:eac1dd5ac88558b5f38442bafd04b7c6.png?437x84}}
+
+**Il ne reste plus qu'à rafraîchir la page de Blockly@rduino et admirer le travail !!!**
+
+Bon, ben là, il ne se passe toujours rien…si tout est normal c'est déjà que vous n'avez pas rajouté d'erreur…
+
+===== Il en manque... =====
+
+Il sait qu'il doit examiner ces contenus, mais il les affiche quand ? A quel endroit dans le menu ? Ah mais oui, nom de Zeus la toolbox !!!
+
+La '**toolbox**' est le nom donné par Blockly pour les menus, les différents fichiers sont enregistrés dans le **dossier '\toolbox\'**  :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:3148987affa0647263f77f4254895aa5.png}}
+
+//**Libre à vous de créer d'autres toolbox en n'oubliant pas de modifier index.html :** //
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:ec09b858c1fb4104a86561574e781d0c.png}}
+
+Bref ouvrons donc la ou les //toolbox //à modifier et rajoutons les lignes correspondantes en s'inspirant de ce qui existe déjà :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:0163df1634172f1d34018081aa7a3416.png}}
+
+C'est facile à décrypter :
+
+  * je ne vous explique pas la différence entre **category **et **block**…
+  * je mets en nom de catégorie un **variable <font inherit/inherit;;#0000FF;;inherit>CAT_FLYCAMONE</font>**
+  * je rajoute un appel à chacun des 3 blocs que j'ai créés **en utilisant le même nom que le nom de la fonction**  ! block type="**<font inherit/inherit;;#FF0000;;inherit>flycam_switch</font>**" <→ Blockly.Blocks.<font inherit/inherit;;#FF0000;;inherit>**flycam_switch**</font>
+  * **colour =**  la même valeur que celle qui définit graphiquement les blocs
+  * l'entrée '//shadow//' permet de pré-remplir l'entrée dont le nom de **variable **est **PIN **avec un bloc '//fantôme//', à tester pour comprendre vite
+
+Dans mon exemple j'ai choisi de le disposer avant la catégorie 'CAT_BQ'. Ce n'est pas le nom qui apparaît…
+
+===== Courage on y est presque ! =====
+
+Comme nous n'avons utilisé que des **variables**, les textes portent pour l'instant le nom de la **variable **et non pas son contenu ! Là c'est très facile car il suffit de porter les //équivalences //dans les fichiers de langue ad-hoc dans le dossier '**\lang\blocks\**'(//merci de compléter au moins le english en plus//) :
+  * dans **fr.js**  on va retrouver :
+      * le nom de la catégorie avec les autres (//merci de les laisser par ordre alphabétique//) :
+        * {{:fr:arduino:blockly_rduino:creerblocsmultiling:9264ba6188f8e5a7ea48f5bfa7fa4d14.png}}
+      * la définition de chaque variable pour lesquels on veut voir du texte apparaître dans le bloc :
+        * {{:fr:arduino:blockly_rduino:creerblocsmultiling:180a4e6a5aec08a3019e3df43dd0f9ab.png}}
+  * dans le fichier **en.js**, à peu près aux mêmes endroits vous rajoutez la version anglaise :
+      * {{:fr:arduino:blockly_rduino:creerblocsmultiling:c1c746fb9445ffa191d181ac5c345829.png}}
+
+**<font inherit/inherit;;inherit;;#FFFF00>TRUC & ASTUCE</font>**: comme il s'agit de variables, par aspect pratique, j'ai fait des équivalences de variables : Blockly.Msg.FLYCAM_STOP_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT; car la variable Blockly.Msg.FLYCAM_SWITCH_INPUT est définie juste au-dessus. Car <font inherit/inherit;;#FF0000;;inherit>**le système lit les informations dans l'ordre des lignes !**</font>
+
+==== Ca y est !!! A vous la gloire d'avoir contribué à ce magnifique projet !!! ====
+
+Et la joie de debugger si comme moi vous faites régulièrement des fautes de frappe, d'oubli de **points virgule ;**  , etc…
+
+===== Ok, mais ce n'est plus suffisant ! =====
+
+En effet, en programmation héritée des langages C, il est indispensable de définir la //nature des objets//, donc le **type **des **variables**. Grâce à l'excellent script du créateur d'Ardublockly (//et pas Ardublock//), tous les types sont recensés dans le fichier '**\core_Ardublockly\static_typing.js**' :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:085341674c7538297d4b3e74baf2cd78.png}}
+
+Donc il va aussi falloir expliquer à Blockly@rduino de quelle **nature/type **  (//en référence aux noms dans le fichier ci-dessus//) est **chaque bloc **créé :
+
+<code>
+Blockly.Types.CHARACTER            // Single character
+Blockly.Types.TEXT                  // General text string type
+Blockly.Types.BOOLEAN               // Can only have two values, generally 0 for false, or 1 for true
+Blockly.Types.NUMBER                // A general number type
+Blockly.Types.VOLATIL_NUMBER        // Volatil specific for interruption
+Blockly.Types.SHORT_NUMBER          // Short integer number
+Blockly.Types.LARGE_NUMBER          // Number in a large range
+Blockly.Types.DECIMAL               // Number type for numbers with a fractional part
+Blockly.Types.ARRAY                 // Array of any type of items
+Blockly.Types.NULL                  // Used as a "no type" wild card natively
+Blockly.Types.UNDEF                 // Can be used to delegate type assignment
+Blockly.Types.CHILD_BLOCK_MISSING   // Set when no child block (meant to define the variable type) is connected
+</code>
+
+**Créez**  pour mon exemple le fichier **'blocksflycamone-eco-v2blocks_typing.js'**  et rajoutez les lignes ad-hoc en bas :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:5301e003cff3c296e183865497ac58fd.png}}
+
+Cela permet de typer **automatiquement **les variables en fonction des blocs en entrée :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:306c12b5fb264941ceec7079ca2d7419.png}}
+
+<font inherit/inherit;;#ff0000;;inherit>Puis finir en recensant ce nouveau fichier de typages dans le fichier centralisateur **'blocksblocks_typing.js'**</font>
+
+===== Ouf c'est fini ! =====
+
+Il ne vous reste plus qu'à envoyer un petit mail à [[canet.s@free.fr?body=Voici ma contribution gÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©niale et modeste :&subject=Blockly@rduino est formidable !|canet.s@free.fr]] pour un petit merci, un petit coucou et surtout **contribuer en proposant de rajouter à cette aventure collective vos travaux !**
+
+===== Il en manque... =====
+
+Il sait qu'il doit examiner ces contenus, mais il les affiche quand ? A quel endroit dans le menu ? Ah mais oui, nom de Zeus la toolbox !!!
+
+La '**toolbox**' est le nom donné par Blockly pour les menus, les différents fichiers sont enregistrés dans le **dossier '\toolbox\'**  :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:3148987affa0647263f77f4254895aa5.png}}
+
+//**Libre à vous de créer d'autres toolbox en n'oubliant pas de modifier index.html :** //
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:ec09b858c1fb4104a86561574e781d0c.png}}
+
+Bref ouvrons donc la ou les //toolbox //à modifier et rajoutons les lignes correspondantes en s'inspirant de ce qui existe déjà :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:0163df1634172f1d34018081aa7a3416.png}}
+
+C'est facile à décrypter :
+
+  * je ne vous explique pas la différence entre **category **et **block**…
+  * je mets en nom de catégorie un **variable <font inherit/inherit;;#0000FF;;inherit>CAT_FLYCAMONE</font>**
+  * je rajoute un appel à chacun des 3 blocs que j'ai créés **en utilisant le même nom que le nom de la fonction**  ! block type="**<font inherit/inherit;;#FF0000;;inherit>flycam_switch</font>**" <→ Blockly.Blocks.<font inherit/inherit;;#FF0000;;inherit>**flycam_switch**</font>
+  * **colour =**  la même valeur que celle qui définit graphiquement les blocs
+  * l'entrée '//shadow//' permet de pré-remplir l'entrée dont le nom de **variable **est **PIN **avec un bloc '//fantôme//', à tester pour comprendre vite
+
+Dans mon exemple j'ai choisi de le disposer avant la catégorie 'CAT_BQ'. Ce n'est pas le nom qui apparaît…
+
+===== Courage on y est presque ! =====
+
+Comme nous n'avons utilisé que des **variables**, les textes portent pour l'instant le nom de la **variable **et non pas son contenu ! Là c'est très facile car il suffit de porter les //équivalences //dans les fichiers de langue ad-hoc dans le dossier '**\lang\blocks\**'(//merci de compléter au moins le english en plus//) :
+  * dans **fr.js**  on va retrouver :
+      * le nom de la catégorie avec les autres (//merci de les laisser par ordre alphabétique//) :
+        * {{:fr:arduino:blockly_rduino:creerblocsmultiling:9264ba6188f8e5a7ea48f5bfa7fa4d14.png}}
+      * la définition de chaque variable pour lesquels on veut voir du texte apparaître dans le bloc :
+        * {{:fr:arduino:blockly_rduino:creerblocsmultiling:180a4e6a5aec08a3019e3df43dd0f9ab.png}}
+  * dans le fichier **en.js**, à peu près aux mêmes endroits vous rajoutez la version anglaise :
+      * {{:fr:arduino:blockly_rduino:creerblocsmultiling:c1c746fb9445ffa191d181ac5c345829.png}}
+
+**<font inherit/inherit;;inherit;;#FFFF00>TRUC & ASTUCE</font>**: comme il s'agit de variables, par aspect pratique, j'ai fait des équivalences de variables : Blockly.Msg.FLYCAM_STOP_INPUT = Blockly.Msg.FLYCAM_SWITCH_INPUT; car la variable Blockly.Msg.FLYCAM_SWITCH_INPUT est définie juste au-dessus. Car <font inherit/inherit;;#FF0000;;inherit>**le système lit les informations dans l'ordre des lignes !**</font>
+
+==== Ca y est !!! A vous la gloire d'avoir contribué à ce magnifique projet !!! ====
+
+Et la joie de debugger si comme moi vous faites régulièrement des fautes de frappe, d'oubli de **points virgule ;**  , etc…
+
+===== Ok, mais ce n'est plus suffisant ! =====
+
+En effet, en programmation héritée des langages C, il est indispensable de définir la //nature des objets//, donc le **type **des **variables**. Grâce à l'excellent script du créateur d'Ardublockly (//et pas Ardublock//), tous les types sont recensés dans le fichier '**\core_Ardublockly\static_typing.js**' :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:085341674c7538297d4b3e74baf2cd78.png}}
+
+Donc il va aussi falloir expliquer à Blockly@rduino de quelle **nature/type **  (//en référence aux noms dans le fichier ci-dessus//) est **chaque bloc **créé :
+
+<code>
+Blockly.Types.CHARACTER            // Single character
+Blockly.Types.TEXT                  // General text string type
+Blockly.Types.BOOLEAN               // Can only have two values, generally 0 for false, or 1 for true
+Blockly.Types.NUMBER                // A general number type
+Blockly.Types.VOLATIL_NUMBER        // Volatil specific for interruption
+Blockly.Types.SHORT_NUMBER          // Short integer number
+Blockly.Types.LARGE_NUMBER          // Number in a large range
+Blockly.Types.DECIMAL               // Number type for numbers with a fractional part
+Blockly.Types.ARRAY                 // Array of any type of items
+Blockly.Types.NULL                  // Used as a "no type" wild card natively
+Blockly.Types.UNDEF                 // Can be used to delegate type assignment
+Blockly.Types.CHILD_BLOCK_MISSING   // Set when no child block (meant to define the variable type) is connected
+</code>
+
+**Créez**  pour mon exemple le fichier **'blocksflycamone-eco-v2blocks_typing.js'**  et rajoutez les lignes ad-hoc en bas :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:5301e003cff3c296e183865497ac58fd.png}}
+
+Cela permet de typer **automatiquement **les variables en fonction des blocs en entrée :
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:306c12b5fb264941ceec7079ca2d7419.png}}
+
+<font inherit/inherit;;#ff0000;;inherit>Puis finir en recensant ce nouveau fichier de typages dans le fichier centralisateur **'blocksblocks_typing.js'**</font>
+
+===== Ouf c'est fini ! =====
+
+Il ne vous reste plus qu'à envoyer un petit mail à [[canet.s@free.fr?body=Voici ma contribution gÃƒÆ’Ã‚Â©niale et modeste :&subject=Blockly@rduino est formidable !|canet.s@free.fr]] pour un petit merci, un petit coucou et surtout **contribuer en proposant de rajouter à cette aventure collective vos travaux !**
+

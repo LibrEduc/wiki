@@ -1,0 +1,16 @@
+bonjour tous le monde
+
+voici une méthode simple pour visualiser une camera usb sur un raspberry pi
+
+ouvrir le terminal et taper ces commandes
+
+sudo apt-get update
+
+sudo apt-get upgrade     ( si necessaire)
+
+sudo apt-get install camorama
+
+il ne reste plus qua lancer camorama
+
+{{:raspberrypi.jpg?nolink&280x187}}
+

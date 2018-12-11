@@ -1,0 +1,36 @@
+Vous avez cliqué sur la petite roue dentée, mais maintenant que choisir dans cette fenêtre ?
+
+//Je ne vous fais pas l'affront de vous expliquer le choix de la langue et de la carte…//
+
+Maintenant pour la partie inférieure, des choses se font automatiquement et vous laissent le choix quand il vous en reste. **Pour aider j'ai utilisé les couleurs des logos d'Arduino & codebender.**
+
+   * Internet non détecté par le plugin Codebender ou pas de plugin installé dans le navigateur :
+
+{{:fr:arduino:blockly_rduino:c524759275308234d6d600e9b546639e.png}}
+
+//S'il y a accès au web alors les 2 toggle reviennent en position.//
+
+  * Internet est détecté par le plugin alors le premier toggle est dégrisé (//si, si, regardez bien//):
+
+{{:fr:arduino:blockly_rduino:591eb659cddea3991749b962f2d323d3.png}}
+
+  * Si en plus l'accès web est coché alors la** communication série**  est possible et l'onglet est disponible dans le menu de gauche :
+
+{{:fr:arduino:blockly_rduino:1c2087579e72e265cdde46bf38843ccb.png}}
+
+Le logo en bout de ligne indique toutefois qu’on est en téléversement local, par EDI Aduino :
+
+{{:fr:arduino:blockly_rduino:4589b5052a9ea0b777c2244815573dc6.png}}
+
+  * Si vous avez accès au web & que vous choisissez le téléversement par le plugin codebender :
+
+{{:fr:arduino:blockly_rduino:056279a9d5dd04362459bebc97b60085.png}}
+
+Le logo en bout de ligne indique qu’on est en téléversement par le serveur Codebender :
+
+{{:fr:arduino:blockly_rduino:ff16390fd6b3c704c822c3809656a8df.png}}
+
+  * Si vous utilisez la version hors ligne total de Blockly@rduino_AIO :
+
+{{:fr:arduino:blockly_rduino:8e54aa6c112485bed434a26e8c4f31da.png}}
+

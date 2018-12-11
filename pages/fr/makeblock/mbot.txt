@@ -1,0 +1,25 @@
+====== mBot ======
+
+[[http://mblock.cc/wp-content/uploads/2015/03/IMG_18015.jpg|{{  http://mblock.cc/wp-content/uploads/2015/03/IMG_18015.jpg?nolink&680x376  }}]]
+
+mBot is a low cost, easy-to-run robot kit for kids to get hands-on experience about graphical programming, electronics, robotics. It is a all-in-one solution for robotic learning and designed for STEM education.
+
+Cute shape with easy assembly is our goal. mBot contains 45 pieces in total, so it is easy to have a sense of achievement for kids to assemble in 10 mins quickly.
+
+====== **Graphical programming inspired by Scratch 2.0**  ======
+Since Scratch2.0 is very popular in teachers and students as a graphical programming software, it has almost been proved to be the most easy-to-use graphical programming tool. So based on Scratch 2.0, we develop a new software mBlock to use Scratch-style coding to program Arduino and robots.
+
+New features in mBlock:
+
+  * **Based on scratch 2.0**  developed by MIT Media Lab, beautiful interface and easy for everyone.
+  * **Free & source code:**  the software is free and support Window & Mac system. We will also open the source code later.
+  * **Support wireless communication**: you can use Bluetooth or 2.4GHz wireless serial to communicate with mBot. And download the program wirelessly is supported.
+  * **Easy to use**: No extension file! No plug-in! The easiest way to program your Arduino and robots.
+Arduino mode: perfect for every beginner to switch from graphical programming to text-based programming. See more improvements we made for easy teaching and learning from BELOW.
+
+====== **Open source platform, Continuous learning**  ======
+
+Arduino is an open-source electronic prototyping platform used by people in the global world to start a project quickly. It has been proved to be very expandable and suitable for beginners. So we design mBot's electronics based on Arduino platform, kids can be easy to use and extend, bring their every idea to life.
+
+With intuitional color labels and easy-to-use RJ25 connector, the board could get wired within a few seconds, so students could get more time to focus on creating all kinds of interactive stories and projects.
+

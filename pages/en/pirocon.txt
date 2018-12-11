@@ -1,0 +1,33 @@
+Qu'est ce que le [[:raspberry_pi|Raspberry ]]?
+
+
+C'est quoi le PiRoCon?
+
+
+PiRoCon est un shield à ajouter au RaspberryPi pour contrôler facilement un robot :
+
+
+{{:pirocon.jpg?nolink&280x163}}
+
+
+Ses caractéristiques :
+
+
+  * régulateur de 5V 1,5 A pour alimenter le robot et le Pi avec des accus de 6 à 9V
+  * LED d'indication de 5V et de l'alimentation de 3,3 V
+  * double pont en H pour piloter deux moteurs à courant continu (ou 2 jeux de 2 si vous utilisez des moteurs accouplés de chaque côté du robot )
+  * tous les signaux GPIO sont dotés de connecteurs 3 broches (alimentation , masse et signal)
+  * connecteur mâle à 4 broches pour brancher un capteur de distance à ultrasons
+  * 2 des connecteurs GPIO peuvent être utilisés en tant que pilotes de servo-moteurs
+
+
+Cette carte additionnelle a évolué et est passée en V1.2.
+
+
+<html>
+
+
+<iframe src="//player.vimeo.com/video/82605157?title=0&byline=0&portrait=0" width="500" height="283" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </html> // 
+
+
+//~~COMPLEX_TABLES~~//

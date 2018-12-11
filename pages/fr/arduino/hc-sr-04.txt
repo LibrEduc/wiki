@@ -1,0 +1,37 @@
+Tutoriel inspiré de [[http://tiptopboards.free.fr|http://tiptopboards.free.fr]]
+
+Capteur de distance à ultrasons HC SR-04, utilisation avec Arduino\\
+\\
+{{https://lh3.googleusercontent.com/-VFYpnrn4ngc/UssrgNRaWiI/AAAAAAAABEA/H1JM3UcZVIM/w600-h400-no/ultrason_montage_leds.jpg?nolink&}}\\
+\\
+**<font 150% line-height: 116%/inherit;;inherit;;inherit>Composants utilisés</font>    **
+  * 1 [[http://tiptopboards.com/69-module-%C3%A0-ultrasons-hc-sr04-capteur.html|capteur de distance à ultra sons HC SR-04]]
+  * 1 [[http://tiptopboards.com/65-carte-arduino-uno-r3-cable-usb.html|carte Arduino Uno]]
+  * 1 shield [[http://tiptopboards.com/72-shield-de-prototypage-arduino-avec-plaquette-d-essais.html|breadboard de montage]]
+  * quelques [[http://tiptopboards.com/214-40-c%C3%A2bles-connecteurs-dupont-m%C3%A2le-m%C3%A2le.html|câbles de branchement Dupont Mâle-Mâle]]
+  * 2 [[http://tiptopboards.com/207-led-ultra-brillantes-5mm-rouge-vert-bleu-blanc-jaune.html|LED (rouge et verte)]] en série avec une [[http://tiptopboards.com/127-lot-de-20-r%C3%A9sistances-470-ohm-14-watt.html|résistance de 470 Ohm]]
+
+ \\ {{https://lh3.googleusercontent.com/-0M9EPqIfjgI/UssrifCymeI/AAAAAAAABEQ/Vtl1s4fclEw/w600-h450-no/ultrason_composants_kit.jpg?nolink&}} \\  \\ **<font 150% line-height: 116%/inherit;;inherit;;inherit>Principe de fonctionnement</font>    **  \\ Le capteur émet une salve d'ultra-sons, le récepteur chronomètre leur temps d'aller/ retour. \\ On en déduit la distance précise entre le capteur et l'obstacle qui réfléchit le son : \\ {{https://lh3.googleusercontent.com/-kPGd7IANwyk/Us3d6iiEj3I/AAAAAAAABFw/qOI84Vvb9Es/w565-h248-no/ultrason_timing.jpg?nolink&}} \\  \\ Le module HC SR-04 est monté, prêt à l'emploi. \\ {{https://lh3.googleusercontent.com/-2dWnEIomX94/UssrjJ3LNkI/AAAAAAAABEY/T-6t3fpBQoE/w400-h250-no/ultrason_tranmetteur.jpg?nolink&}} \\  \\ **<font 150% line-height: 116%/inherit;;inherit;;inherit>Caractéristiques</font>    **  \\ Le module à ultra-sons permet de détecter automatiquement un obstacle dans un //**angle de visée étroit de 15°**//, et de mesurer une distance sans contacts, sur une portée de 2 cm à 450 cm.
+
+  * On peut mesurer une distance jusqu'à 0.3 cm près.
+  * Courant de repos moins de 2 mA
+  * Signal de sortie : signal électrique 5V haut niveau, 0V niveau bas.
+  * Un quartz produit une onde inaudible de fréquence 40 kHz de forme carrée.
+  * Taille 45 x 20 x 15 mm
+
+{{https://lh5.googleusercontent.com/-nyEtknwvtLc/UssrjqsLR2I/AAAAAAAABEg/S3wbZ_0jjQs/w400-h250-no/ultrason_verso.jpg?nolink&}} \\  \\ **<font 150% line-height: 116%/inherit;;inherit;;inherit>Calcul de la distance</font>    **  \\ La vitesse du son est de 340 m/s (il faut 29,4 microsecondes pour parcourir 1 cm). \\ En 1 ms, l'onde ultrasonore se déplace de 340 mm = 34 cm. \\ Le capteur fournit une <font 150% line-height: 116%/inherit;;inherit;;inherit>sortie de durée proportionnelle à la distance</font>    .
+
+**<font 150% line-height: 116%/inherit;;inherit;;inherit>Câblage</font>    **  \\ Capteur –> Arduino
+
+  * pin 1 Alimentation Vcc –> +5V Arduino
+  * pin 2 Emission d'ultrasons (Trig) –> pin de sortie <font 150% line-height: 116%/inherit;;inherit;;inherit>p13</font>
+  * pin 3 Réception du signal Echo (signal de sortie TTL en largeur d'impulsion modulée)–> pin d'entrée <font 150% line-height: 116%/inherit;;inherit;;inherit>p12</font>
+  * pin 4 Gnd –> Masse Arduino
+
+ \\ On rajoute dans ce montage deux Leds (rouge et verte) sur les <font 150% line-height: 116%/inherit;;inherit;;inherit>pin 10 et 11</font>    (en série avec 470 ohm). \\ Elles servent de témoins de distance trop près / trop loin. \\ {{https://lh6.googleusercontent.com/-dGLwAPiZHQU/Ussse6HO3HI/AAAAAAAABE0/f__UsPrMC0A/w600-h400-no/ultrason_montage.jpg?nolink&}} \\  \\ **<font 150% line-height: 116%/inherit;;inherit;;inherit>Programmation Arduino</font>    **  \\ Il n'y a pas besoin d'installer de librairie spécialisée. \\ On peut éventuellement se servir de #include <Ultrasonic.h>
+
+ \\ ''//#define trigPin 13 //  Trig Ultrasons (sortie) \\ #define echoPin 12 //Echo Ultrasons (entrée) \\ #define ledVerte 11 // Led verte \\ #define ledRouge 10 //Led rouge \\  \\ void setup() { \\ Serial.begin (9600); \\ pinMode(trigPin, OUTPUT); // Trig est une sortie \\ pinMode(echoPin, INPUT); //Echo est le retour, en entrée \\ pinMode(ledVerte, OUTPUT); \\ pinMode(ledRouge, OUTPUT); \\ } \\  \\ void loop() { \\ long duration, distance; \\ digitalWrite(trigPin, LOW); \\ delayMicroseconds(2); \\ digitalWrite(trigPin, HIGH); \\ delayMicroseconds(10); // Trig déclenché 10ms sur HIGH \\ digitalWrite(trigPin, LOW); \\  \\ //Calcul de l'écho \\ duration = pulseIn(echoPin, HIGH); //  \\ Distance proportionnelle à la durée de sortie \\ distance = duration*340/(2*10000); //Vitesse du son théorique \\  \\ if (distance < 4) { // Distance trop près \\ digitalWrite(ledVerte,HIGH); //Vert éclairé seulement \\ digitalWrite(ledRouge,LOW); \\ } \\ else { // Trop loin \\ digitalWrite(ledVerte,LOW); \\ digitalWrite(ledRouge,HIGH); \\ } \\ //Hors de portée (duration) \\ if ( distance <= 0){ //  \\ Serial.print(duration); \\ Serial.println("Hors de portee"); \\ } \\ else { \\ Serial.print(distance); \\ Serial.print(" cm "); \\ Serial.print(duration); \\ Serial.println(" ms"); \\ } \\ delay(100); //0.1 sec entre deux mesures \\ }//'''' \\  \\ Le code envoie une impulsion de 10us sur Trig pour déclencher la mesure (séquence de 8 pulses carrés sur la fréquence 40 kHz). \\ En réponse, la durée d'impulsion en sortie est proportionnelle à la distance (aller/retour), avec// **<font 150% line-height: 116%/inherit;;inherit;;inherit>Distance = Durée de l’impulsion * Vitesse du son / 2</font>    ** // \\  \\ **Vidéo de démo**<html><iframe width="853" height="480" src="//www.youtube-nocookie.com/embed/Le_4Nfwxntg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></html>
+
+**Références** \\ En anglais [[http://www.instructables.com/id/Simple-Arduino-and-HC-SR04-Example/step3/Upload-the-sketch/|http://www.instructables.com/id/Simple- ... he-sketch/]] \\
+Le capteur HCSR04 [[http://www.micropik.com/PDF/HCSR04.pdf|http://www.micropik.com/PDF/HCSR04.pdf]] \\
+[[http://wiki.tetrasys-design.net/HCSR04Ultrasonic|http://wiki.tetrasys-design.net/HCSR04Ultrasonic]]

@@ -1,0 +1,120 @@
+Pour ne pas monopoliser un écran, clavier, souris et aussi pour pouvoir commander à distance votre Raspberry Pi, vous allez pouvoir utiliser VNC. Pour que cela fonctionne il faut que vous ayez suivi [[http://rpi_connecter_ssh|le tutoriel sur SSH ]]et donc que vous puissiez vous connecter en SSH à votre Raspberry pi.
+
+
+La différence entre SSH et VNC est que SSH ne gère pas d’interface graphique il ne vous permet que d’exécuter des commandes dans le terminal, contrairement à VNC qui va vous donner la possibilité de contrôler votre raspberry pi de manière graphique avec la souris et le clavier.
+
+
+Nous allons donc commencer par installer un serveur **VNC**, il en existe plusieurs, mais celui que je vous propose est tightvnc.
+
+
+<font 14px/arial;;#000000;;#ffffff>INSTALLER VNC</font>
+
+
+Pour l’installer connectez vous en SSH au Raspberry pi et mettre à jour votre OS en saisissant ces lignes de code.
+
+
+$ sudo apt-get update
+
+
+$ sudo apt-get upgrade
+
+
+Nous allons ensuite installer tightvncserver sur le Rpi
+
+
+$ sudo apt-get install tightvncserver
+
+
+Quand l'installation est finie, vous allez lancer le serveur VNC avec la commande
+
+
+$ vncserver
+
+
+La première fois que vous exécuterez cette commande on vous demandera votre mot de passe, si vous avez gardé le mot de passe par défaut qui est « raspberry » vous remarquer que le mot de passe n’est pas accepté, c’est par ce qu’il faut entrer un mot de passe à 8 caractères donc il faudra donc écrire « raspberr »
+
+
+**<font 14px/arial;;#000000;;#ffffff>LE CLIENT VNC</font> ** 
+
+
+Pour accéder à votre bureau en VNC, il faut télécharger un logiciel (un client VNC) qui vous permettra de prendre le contrôle de votre Raspberry pi.
+
+
+Il existe beaucoup de clients, mais je vous conseille VNC Viewer (qui est aussi disponible sur Android et sur iOS), vous pouvez le [[http://www.realvnc.com/download/viewer/|télécharger ici]], une fois installé sur votre ordinateur exécuter le vous devriez voir ça.
+
+
+{{http://tic.technologiescollege.fr//dokuwiki/lib/plugins/ckgedit/fckeditor/userfiles/image/vnc.jpg?nolink&280x162}}
+
+
+Dans le champ VNC Server entrer l’adresse ip de votre Raspberry pi suivi de :1 et cliquer ensuite su Connect
+
+
+Si vous recevez un message d’avertissement cliquer sur continuer.
+
+
+La fenêtre suivante vous demandera votre mot de passe (limité à 8 caractères) par défaut se sera « raspberr »
+
+
+{{:vnc2.jpg?nolink&280x143}}
+
+
+//**Pour trouver l'adresse ip saisir dans le terminal la commande ** // 
+
+
+$ ifconfig
+
+
+Le bureau de votre Raspberry pi devrait apparaitre. Vous êtes maintenant en mesure d’utiliser la souris et le clavier pour contrôler votre Raspberry pi à distance.
+
+
+{{:vnc3.jpg?nolink&400x309}}
+
+
+<font 14px/arial;;#000000;;#ffffff>LANCEMENT AUTOMATIQUEMENT DE VNC AU DEMARRAGE DU RPI</font>
+
+
+Pour démarrer un serveur VNC sans passer par SSH, il va falloir créer un nouveau fichier dans le dossier /etc/init.d
+
+
+La commande nano permet d'ouvrir un editeur pour créer ce fichier. Il faut donc saisir la commande :
+
+
+$ sudo nano /etc/init.d/tightvncserver
+
+
+Vous allez ensuite saisir le contenu de ce fichier
+
+
+#!/bin/sh\\ 
+# /etc/init.d/tightvncserver\\ 
+VNCUSER='pi'\\ 
+case "$1" in\\ 
+start)\\ 
+su $VNCUSER -c '/usr/bin/tightvncserver :1'\\ 
+echo "Starting TightVNC Server for $VNCUSER "\\ 
+;;\\ 
+stop)\\ 
+pkill Xtightvnc\\ 
+echo "TightVNC Server stopped"\\ 
+;;\\ 
+*)\\ 
+echo "Usage: /etc/init.d/tightvncserver {start|stop}"\\ 
+exit 1\\ 
+;;\\ 
+esac\\ 
+exit 0
+
+
+Il faut ensuite donner des droits de permission d'éxécution :
+
+
+$ sudo chmod 755 /etc/init.d/tightvncserver
+
+
+Pour que VNC se lance à chaque démarrage du Rpi :
+
+
+$ sudo update-rc.d tightvncserver defaults
+
+
+~~COMPLEX_TABLES~~

@@ -1,0 +1,12 @@
+=====  Tout d'abord rendez-vous sur le site des développeurs de Blockly  =====
+
+<font inherit/inherit;;#FF0000;;inherit>pour bien éplucher la documentation</font>, site ou wiki. Il faut être sûr des commandes Arduino dont vous aurez besoin, s'il faut des bibliothèques supplémentaires ou s'il utilise des commandes particulières.
+
+<file>
+Toute la documentation officielle se trouve là : https://developers.google.com/blockly/guides/create-custom-blocks/define-blocks
+</file>
+
+==== Le principe illustré de tous les fichiers qu'il faudra modifier : ====
+
+{{:fr:arduino:blockly_rduino:creerblocsmultiling:resume_blocklyarduino.jpg?direct&843x1089}}
+

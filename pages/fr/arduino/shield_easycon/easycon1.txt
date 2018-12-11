@@ -1,0 +1,6 @@
+La carte d'interface EASYCON1 permet de connecter facilement 20 entrées-sorties à la carte Arduino Mega. Les embases jacks stéréo 2.5mm sont compatibles avec nos cordons et nos cartes I/O présentées sur ce site. Extensible selon vos besoin, grâce à ces connecteurs stackables, et l'adjonction d'une carte EASYCON2 ( 18 entrées supplémentaires ).
+
+Deux kits optionnels de composants permettront d'étendre les capacités de la carte en lui ajoutant :
+
+  * Une commande de deux petits moteurs courant continu ( contrôle de la vitesse et de la direction )
+  * Une ou deux "banks" de mémoire EEPROM externe pour le stockage de vos projets autonomes

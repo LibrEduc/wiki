@@ -1,0 +1,46 @@
+====== La structure à respecter ======
+
+Dans le dossier 'examples', créer un sous dossier portant un nom parlant/explicite sur votre projet **MAIS sans espace ni accent dans le nom** !
+
+{{:fr:arduino:blockly_rduino:exemples:exemple3.jpg?nolink&828x198}}
+
+Comme vous le constatez, ce nom de dossier nous servira de préfixe pour tous les documents.
+
+Prenons l'exemple "BT_piloter_DEL" (//piloter une DEL par Bluetooth//) :
+
+   * le schéma de câblage au format .fzz réalisé avec le logiciel libre Fritzing ([[http://fritzing.org/home/|http://fritzing.org/home/]]) : <font inherit/inherit;;#0000FF;;inherit>BT_piloter_DEL</font>.<font inherit/inherit;;#FF0000;;inherit>fzz</font>
+  * la capture d'écran de ce même schéma de câblage :<font inherit/inherit;;#0000FF;;inherit>BT_piloter_DEL</font>**<font inherit/inherit;;#0000FF;;inherit>_</font>fritzing**.<font inherit/inherit;;#FF0000;;inherit>jpg</font>
+  * la miniature de la capture d'écran pour la faire apparaître en fenêtre : <font inherit/inherit;;#0000FF;;inherit>BT_piloter_DEL</font>**_fritzing_redimensionner**.<font inherit/inherit;;#FF0000;;inherit>jpg</font>
+  * la sauvegarde par Blockly@rduino du programme réalisé : <font inherit/inherit;;#0000FF;;inherit>BT_piloter_DEL</font>.<font inherit/inherit;;#FF0000;;inherit>xml</font>
+  * la capture d'écran du programme pour pouvoir le publier : <font inherit/inherit;;#0000FF;;inherit>BT_piloter_DEL</font>**_blockly**<font inherit/inherit;;#FF0000;;inherit>.jpg</font>
+
+====== Les fichiers à modifier ======
+
+Maintenant que vos **5 fichiers**  sont prêts,// bien orthographiés, stockés dans le bon dossier bien orthographié//, rajoutons cela à Blockly@rduino.
+
+Pour cela il suffit d'éditer le fichier "\examples\examples.json" pour y insérer à l'endroit voulu votre exemple :
+
+<code>
+    {
+        "source_url": "./BT_piloter_DEL/BT_piloter_DEL.xml",
+        "source_text": "suite à la connection Bluetooth, voici comment piloter une DEL par Android",
+        "image": "./BT_piloter_DEL/BT_piloter_DEL_fritzing.jpg",
+        "link_url": "https://www.youtube-nocookie.com/embed/vlJl28qE5vg?list=PLwy0yw3Oq4-uFJl0j-efUAAlfCbqtcTMr",
+        "link_text": "tutos vidéo",
+        "visible": true
+    },
+</code>
+
+**<font inherit/inherit;;#FF0000;;inherit>ATTENTION à bien entourer par des accolades { } et à finir par une virgule !</font>**
+
+Dans le détail :
+
+  * source_url : l'endroit où est stockée la sauvegarde en xml pour Blokly@rduino,
+  * source_text : ce que votre utilisateur verra, le texte sur lequel il va cliquer pour déclencher l'ouverture du fichier xml précédemment cité,
+  * image : la vignette qui apparaît dans la pop-in,
+  * link_url : si vous désirez rajouter une documenation, lien extérieur vers la ressource de votre choix, laissez "" si rien,
+  * link_text : ce que votre utilisateur verra, le texte sur lequel il va cliquer pour déclencher l'ouverture du lien hypertexte précédemment cité, laissez "" si rien,
+  * visible : lui mettre 'true' ou 'false' pour définir si cet exemple apparaît en dehors de la configuration.
+
+Vous vous relisez, vous enregistrez, vous remontez ce fichier sur votre serveur et zou !
+

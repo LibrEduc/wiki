@@ -1,0 +1,26 @@
+
+
+**//C'est quoi arduino ? // **
+
+Les cartes Arduino sont des cartes de prototypage rapide, peu onéreuses (+/- 20 € pour la Uno, et +/- 45 pour la Méga) et [[http://www.wikiwand.com/fr/Open_source|open source]].
+
+"**Arduino** est un [[http://www.wikiwand.com/fr/Circuit_imprim%C3%A9|circuit imprimé]] en [[http://www.wikiwand.com/fr/Mat%C3%A9riel_libre|matériel libre]] (dont les plans de la carte elle-même sont publiés en [[http://www.wikiwand.com/fr/Licence_libre|licence libre]] dont certains composants de la carte, comme le microcontrôleur par  exemple, ne sont pas en licence libre) sur lequel se trouve un [[http://www.wikiwand.com/fr/Microcontr%C3%B4leur|microcontrôleur]] qui peut être [[http://www.wikiwand.com/fr/Programme_informatique|programmé]] pour analyser et produire des [[http://www.wikiwand.com/fr/Signal_%C3%A9lectrique|signaux électriques]], de manière à effectuer des tâches très diverses comme la [[http://www.wikiwand.com/fr/Domotique|domotique]] (le contrôle des appareils domestiques - éclairage, chauffage…), le pilotage d'un [[http://www.wikiwand.com/fr/Robot|robot]], etc. C'est une plateforme basée sur une interface entrée/sortie simple.\\
+Elles embarquent un micro-contrôleur de chez Atmel, programmable depuis un ordinateur via une liaison Usb, ont une série de connecteurs pour accéder aux différentes entrées/sorties.
+
+//[[http://www.wikiwand.com/fr/Arduino|Source : Wikipedia.]]//"
+
+Un connecteur d'alimentation est aussi présent pour rendre la carte autonome une fois que l'on a chargé un programme. En phase de test elle peut prendre l'alimentation via l'USB. En l'équipant de capteurs divers et variés en entrée(s), on peut piloter une (des) sortie(s), en prenant soin de passer par des interfaces suivants les besoins.
+
+Il existe plusieurs cartes Arduino, les plus répandues sont :
+
+|{{:arduinouno.jpg?nolink&280x232}}| \\ Arduino UNO   \\   \\ [[http://arduino.cc/en/Main/ArduinoBoardUno|http://arduino.cc/en/Main/ArduinoBoardUno]]|
+|{{:arduinomega2650.jpg?nolink&280x156}}| \\ Arduino MEGA2650   \\   \\ [[http://arduino.cc/en/Main/ArduinoBoardMega2560|http://arduino.cc/en/Main/ArduinoBoardMega2560]]|
+
+Coté programmation, [[http://arduino.cc/en/main/software|un logiciel]] (IDE ou EDI = espace de développement intégré ) dédié est disponible, comme la carte Arduino il est gratuit et libre, multi-plateforme. La prise en main est - relativement - aisée (pas pour des collégiens), d'autant que divers exemples de programme sont inclus. Il vaut mieux commencer par de petites applications, modifier progressivement les paramètres pour voir ce qu'il se passe, avant de se lancer dans un gros programme.
+
+La communauté Arduino grandit à travers le monde, le principe du logiciel et du matériel open source rend le système bon marché et également pérenne. Des fractions de logiciels ont la possibilité d'être publiées librement et testées par un très grand nombre d'utilisateurs.
+
+Pourquoi une arduino ? parce que [[:shield_easycon|shield easycon]]
+
+\\
+

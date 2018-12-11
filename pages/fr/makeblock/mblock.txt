@@ -1,0 +1,22 @@
+mBlock est une version améliorée de [[http://scratch.mit.edu/|Scratch, ]]célèbre programme de programmation graphique (développé par lifelong kindergarten group at MIT Media Lab). Il est ainsi incroyablement facile de passer à mBlock quand on connaît déjà Scratch, mais aussi quand on n'a aucune connaissance préalable, pour en plus pouvoir interagir avec des modules électroniques du monde Arduino.
+
+mBlock possède de nouveaux blocs liés à des actions matérielles, permettant ainsi de lire des capteurs, contrôler des moteurs, voire même un dispositif entier comme un robot.
+
+Tout d'abord vous retrouverez des blocs basiques liés au micro-contrôleur Arduino par lui-même : écrire et lire sur des broches analogiques ou numériques, pulser sur des sorties PWM. Il y a aussi des blocs spécifiques pour chaque module électronique, comme un capteur de distance ultrasons, capteur de température, capteur de lumière, moteur à courant continu, moteur pas-à-pas, etc. Avec ces nouveaux blocs, il est très facile d'interagir avec tout type de cartes électroniques additionnelles.
+
+{{http://tic.technologiescollege.fr/wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/makeblock/mblock_original.gif?nolink&610x609}}
+
+mBlock est créé en modifiant le code source de Scratch 2.0, version hors-ligne, mais un plugin pour la version en ligne de Scratch est en cours de développement…
+
+Il est si facile d'utiliser mBlock avec des modules électroniques que cela se résume à 4 temps :
+
+{{http://mblock.cc/wp-content/uploads/2014/08/Mblock_web_02.jpg?nolink&582x581}}
+
+mBlock peut aussi programmer des Arduino Uno, Lenardo boards, Makeblock mCore (inspirée de l'Arduino Uno) et etc. Avec un système ouvert (opensource) de communication et un code source libre, il est facile d'ajouter des contrôles pour de nouveaux matériels.
+
+Après avoir fait glisser vos blocs (drag&drop) en un programme cohérent, vous pouvez aller plus loin en éditant le code source Arduino et aussi le téléverser dans la carte.
+
+{{http://tic.technologiescollege.fr/wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/makeblock/mblock_code.gif?nolink&610x609}}
+
+{{http://mblock.cc/wp-content/uploads/2014/08/Mblock_web_04.jpg?nolink&495x459}}
+

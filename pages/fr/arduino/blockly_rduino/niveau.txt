@@ -1,0 +1,73 @@
+{{http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/blockly_rduino/blockly_levels.jpg?nolink&256x36|blockly_levels.jpg}}
+
+====== Des niveaux pourquoi faire ? ======
+
+Parce que Blockly@rduino a pour vocation de s'adresser à tout le monde et qu'il doit donc pouvoir s'y adapter.
+
+====== C'est à dire ? ======
+
+L'objectif est double :
+
+  * ne pas surcharger l'interface avec des blocs dont l'utilisateur n'aurait que faire,
+  * proposer des blocs dont la syntaxe est adaptée au niveau de connaissances de l'utilisateur.
+
+====== Concrètement ? ======
+
+Avant de sélectionner une catégorie à afficher, **vous devez**  //avant //cliquer sur le bouton du niveau qui vous correspond. Certains matériels ne sont pas adaptés à des débutants et ne devraient donc pas être sélectionnables dans la liste des catégories. Trop de choix tue le choix… Mon objectif est d'amener à la compréhension qui permet l'autonomie, puis par couches successives vers la maîtrise, donc prenons le temps d'apprendre et de faire apprendre.
+
+====== Pour quelle échelle de progression ? ======
+
+De façon arbitraire suite à de nombreux ateliers, je me suis arrêté à :
+
+  - niveau 1 : pas forcément lecteur, pour des petits, tout est prêt ;
+  - niveau 2 : on manipule, modifie mais les blocs contiennent des menus déroulants ou le code pour la fonction 'validator' qui vérifie que ce qui est tapé est cohérent (n° de broche, type, etc) ;
+  - niveau 3 : tout est accessible, les entrées sont ouvertes pour y adjoindre des variables au lieu de données en dur suivant le niveau ;
+  - niveau 4 : tout est à faire, les blocs remplacent le code mais c'est aussi détaillé (déclarer dans le setup, plus besoin de photos, etc) ;
+  - tout : l'idée serait de pouvoir tout voir, fusionner les vues de tous les niveaux, mais quel bordel en perspective ! Toutefois ça permet d'appréhender pour le formateur/enseignant.
+
+====== Qui décide ? ======
+
+**Tout le monde**, entre professionnels on se corrige et on s'améliore de nos expériences croisées.
+
+Vous trouverez un début de tri dans le **tableau suivant : [[https://framacalc.org/=Blocklyrduino|https://framacalc.org/=Blocklyrduino]], tout le monde peut écrire dedans pour l'améliorer**.
+
+====== Exemple ======
+
+Évidemment tout cela n'est peut être pas très clair, voyons donc l'**exemple du robot mBot**  qui est déjà mis en place dans le tableau collaboratif cité ci-dessus.
+
+Passez en mode 'TOUT' et vous verrez les 4 niveaux du mBot :
+
+{{http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/blockly_rduino/blockly_levels_ex1.jpg?nolink&285x168|blockly_levels_ex1.jpg}}
+
+Et dans le cas simplement de faire avancer le mBot, cela se traduit par ces 4 niveaux identiques :
+
+{{http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/blockly_rduino/blockly_levels_ex2.jpg?nolink&1126x195|blockly_levels_ex2.jpg}}
+
+===== Niveau 1 =====
+
+pour enfants ou non francophones, tout est fait, simple et clair :
+
+{{http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/blockly_rduino/blockly_levels_ex3.jpg?nolink&231x215|blockly_levels_ex3.jpg}}
+
+===== Niveau 2 =====
+
+après avoir compris qu'un système ne peut pas être parfait et qu'il faut sans cesse contrôler chaque élément, on doit donc gérer chacun des moteurs différemment sinon il n'ira jamais droit, MAIS tout est préparé à l'avance :
+
+{{http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/blockly_rduino/blockly_levels_ex4.jpg?nolink&921x281|blockly_levels_ex4.jpg}}
+
+===== Niveau 3 =====
+
+on casse les paramètres pour avoir un contrôle plus fin, on choisit sur quel paramètre précisément on agit, on comprend que l'action voulue a besoin de plusieurs informations différentes et qu'on peut modifier une seule à la fois :
+
+{{http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/blockly_rduino/blockly_levels_ex5.jpg?direct&|blockly_levels_ex5.jpg}}
+
+===== Niveau 4 =====
+
+on est en mode Arduino pur, certes aidé pour ne pas avoir à chercher dans la documentation perpétuellement, mais il faut penser à tout :
+
+{{http://www.libreduc.cc//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/blockly_rduino/blockly_levels_ex6.jpg?direct&|blockly_levels_ex6.jpg}}
+
+===== Niveau 5 =====
+
+ben y'en a pas…les utilisateurs vont plus logiquement glisser vers le code car modifier un seul élment en plein texte est bien plus rapide que de déplacer des blocs. Donc niveau 5 = code Arduino dans son EDI.
+

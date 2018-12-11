@@ -1,0 +1,81 @@
+
+
+**Scratch Extensions** make it possible to connect Scratch projects with external hardware (such as [[http://wiki.scratch.mit.edu/wiki/LEGO_Education_WeDo_Robotics_Kit|LEGO WeDo]] or [[http://wiki.scratch.mit.edu/wiki/PicoBoard|PicoBoard]]) or sources of information on the web. They add a collection of command and reporter blocks that can be used to interact with a particular device or data source. When an extension is enabled, its blocks appear in the "More Blocks" palette.
+
+[[http://wiki.scratch.mit.edu/wiki/File:LEGO_WeDo_Extension.png|{{http://wiki.scratch.mit.edu/w/images/LEGO_WeDo_Extension.png?nolink&200x300}}]]
+
+[[http://wiki.scratch.mit.edu/wiki/File:LEGO_WeDo_Extension.png|{{http://wiki.scratch.mit.edu/w/skins/common/images/magnify-clip.png?nolink&15x11}}]]
+
+The LEGO WeDo Javascript extension blocks
+
+To add an extension, go to the "More Blocks" category in the Scratch Editor and click "Add an Extension."
+
+[[http://wiki.scratch.mit.edu/wiki/File:Add-an-Extension.png|{{http://wiki.scratch.mit.edu/w/images/Add-an-Extension.png?nolink&210x135}}]]
+
+The button to add an extension in Scratch 2.0.
+
+There are two types of extensions in Scratch 2.0: hardware and web.
+
+===== Contents =====
+
+  * [[http://wiki.scratch.mit.edu/wiki/Scratch_Extension#Writing_Extensions|
+1
+Writing Extensions ]]      * [[http://wiki.scratch.mit.edu/wiki/Scratch_Extension#Javascript_Extensions|
+1.1
+Javascript Extensions ]]
+      * [[http://wiki.scratch.mit.edu/wiki/Scratch_Extension#HTTP_Extensions|
+1.2
+HTTP Extensions ]]
+  * [[http://wiki.scratch.mit.edu/wiki/Scratch_Extension#Distributing_Extensions|
+2
+Distributing Extensions ]]
+  * [[http://wiki.scratch.mit.edu/wiki/Scratch_Extension#See_Also|
+3
+See Also ]]
+
+=====
+Writing Extensions  =====
+
+There are two mechanisms to extend Scratch 2.0, either with HTTP requests or Javascript.
+
+====
+Javascript Extensions  ====
+
+This extension mechanism uses Javascript to create the extensions. The official documentation for creating this kind of extension can be found on the [[http://llk.github.io/scratch-extension-docs/|scratch-extensions-docs]] github repository, along with sample extension code.
+
+The current extensions available in the online editor, like the [[http://wiki.scratch.mit.edu/wiki/LEGO_WeDo_Construction_Set|LEGO WeDo]] extension, are Javascript extensions.
+
+====
+HTTP Extensions  ====
+
+<font inherit/inherit;;inherit;;inherit></font> **Note:**  This mechanism works only with **[[http://wiki.scratch.mit.edu/wiki/Scratch_2.0_Offline_Editor|Scratch 2.0 Offline Editor]]**.
+
+[[http://wiki.scratch.mit.edu/wiki/File:A4s.png|{{http://wiki.scratch.mit.edu/w/images/A4s.png?nolink&197x143}}]]
+
+[[http://wiki.scratch.mit.edu/wiki/File:A4s.png|{{http://wiki.scratch.mit.edu/w/skins/common/images/magnify-clip.png?nolink&15x11}}]]
+
+[[https://github.com/damellis/A4S|A4S]] (Arduino for Scratch) experimental HTTP extension.
+
+Scratch 2.0 cannot interact with hardware devices directly. Instead, hardware extensions come with a helper app, a separate application that the user must install and run on their computer. Scratch communicates with the helper app via HTTP requests, and the helper app talks to the hardware. In the future, some extensions may package their helper apps as browser plugins.
+
+A [[http://wiki.scratch.mit.edu/w/images/ExtensionsDoc.HTTP-9-11.pdf|document]] (//last updated: September 2013//) has been drafted for Scratch 2.0 HTTP extension developers to describe the extension description file format, the protocol used to communicate between Scratch extension helper apps, and the extension development process. This specification is still preliminary and may change.
+
+The Scratch 2.0 extension mechanism is still under development, and [[http://wiki.scratch.mit.edu/wiki/Scratch_Team|Scratch Team]] is still figuring out how the extensions will be shared and distributed.
+
+=====
+Distributing Extensions  =====
+
+An extension distribution strategy is still being worked out. The Scratch team will probably host a small library of "supported" extensions. Users will be able to browse and select extensions from this library from within the Scratch editor. Supported extensions would be checked for quality and safety by the Scratch team. There are likely be strict criteria for including an extension in the Scratch-team supported extensions library, such as command set clarity and ease of use, size of the potential audience, widespread availability of any associated hardware, and a long-term commitment to support the extension.
+
+Projects with experimental extensions cannot be shared on the Scratch website. Extension developers can share their extensions by distributing Scratch 2 project files (.sb2) Users can then use the "File > Upload from computer" command to import the project that uses the extension.
+
+=====
+See Also  =====
+
+  * [[http://wiki.scratch.mit.edu/wiki/How_to_Connect_to_the_Physical_World|How to Connect to the Physical World]]
+  * [[http://wiki.scratch.mit.edu/wiki/Hardware_That_Can_Connect_to_Scratch|Hardware That Can Connect to Scratch]]
+  * [[http://wiki.scratch.mit.edu/wiki/LEGO_Education_WeDo_Robotics_Kit|LEGO Education WeDo Robotics Kit]]
+  * [[http://wiki.scratch.mit.edu/wiki/Scratch_Modifications|Scratch 1.4 Modifications]]
+  * [[http://wiki.scratch.mit.edu/wiki/Remote_Sensor_Protocol|Remote Sensor Protocol]] in Scratch 1.4
+  * [[http://wiki.scratch.mit.edu/wiki/Scratch_Modification|Scratch Modification]]
+

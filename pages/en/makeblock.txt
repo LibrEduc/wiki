@@ -1,0 +1,17 @@
+<font inherit/ ;;inherit;;inherit>Makeblock is a robotic making company, located in Shenzhen China.</font>
+
+<font inherit/ ;;inherit;;inherit>Makeblock is an aluminum extrusion based construct platform for you to bring your ideas into success. We are aiming to help you to realize your dream —— building robots, machines, toys that hide in your mind.</font>
+
+<font inherit/ ;;inherit;;inherit>Makeblock was founded in May, 2011 by engineer Jasen. After more than one year on designing and perfecting the platform, you have nearly 100 kinds of modules to select.</font>
+
+In March, 2012, Makeblock joined the Accelerator Program of [[http://www.haxlr8r.com/companies/7-makeblock|HAXLR8R]], and reported by [[http://www.forbes.com/sites/tomiogeron/2012/06/18/building-on-maker-movement-hardware-startups-pitch-at-haxlr8r-demo-day/|Forbes]] during the exhibition in San Francisco.
+
+**Contact**
+
+   * Hulu Robot Technology Inc.
+  * 426 Gong Le Hua Ting, Xinhu Road,Xixiang Jiedao, Baoan District,Shenzhen, China
+  * Call us: +86 755 86501196
+  * Email us: info [@] makeblock.cc
+
+{{:fr:arduino:makeblock.jpg?nolink&1000x1000}}
+

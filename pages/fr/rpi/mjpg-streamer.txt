@@ -1,0 +1,58 @@
+L’objectif est de diffuser le simplement possible, le flux vidéo de la webcam sur le réseau local.
+
+
+Après plusieurs tentatives avec diverses solutions tel que Motion, ffmpeg, vlc ou autres, j’ai fini par adopter « MJPG-Streamer » qui pour avantages d’être peu consommateur en ressources, d’embarquer son propre serveur web pour la diffusion, et le tout avec une faible latence !
+
+
+MJPG-Streamer n’est pas packagé pour Raspbian, il faut donc le compiler pour le processeur ARM de la Raspberry.
+
+
+Les sources sont disponibles sur sourceforge : http://sourceforge.net/projects/mjpg-streamer/
+
+
+__**Installation de MJPG-Streamer et des dépendances**__ 
+
+
+$ sudo apt-get install libjpeg8-dev imagemagick libv4l-dev
+
+
+$ sudo ln -s /usr/include/linux/videodev2.h /usr/include/linux/videodev.h
+
+
+$ wget http://sourceforge.net/code-snapshots/svn/m/mj/mjpg-streamer/code/mjpg-streamer-code-182.zip
+
+
+$ unzip mjpg-streamer-code-182.zip
+
+
+$ cd mjpg-streamer-code-182/mjpg-streamer $ make mjpg_streamer input_file.so output_http.so
+
+
+$ sudo cp mjpg_streamer /usr/local/bin
+
+
+$ sudo cp output_http.so input_file.so /usr/local/lib/ $ sudo cp -R www /usr/local/www $ mkdir /tmp/stream
+
+
+__**Démarrer la caméra ** __ 
+
+
+$ raspistill --nopreview -w 640 -h 480 -q 5 -o /tmp/stream/pic.jpg -tl 100 -t 9999999 -th 0:0:0 &
+
+
+__**Démarrer Mjpg-Streamer ** __ 
+
+
+$ LD_LIBRARY_PATH=/usr/local/lib mjpg_streamer -i "input_file.so -f /tmp/stream -n pic.jpg" -o "output_http.so -w /usr/local/www"
+
+
+__**Visionner le flux**__ 
+
+
+Connectez vous à un navigateur et saisir l'adresse :
+
+
+http://<IP-address>:8080
+
+
+~~COMPLEX_TABLES~~

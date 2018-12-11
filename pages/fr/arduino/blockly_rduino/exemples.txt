@@ -1,0 +1,6 @@
+====== Les exemples ======
+
+Afin de pouvoir créer des fichiers de départ pour les élèves, pour démarrer des projets compliqués ou bien soumettre une progression, vous pouvez stocker des documents et ainsi les inscrire dans les bons fichiers pour qu'ils apparaissent dans la liste :
+
+{{:fr:arduino:blockly_rduino:exemple1.jpg?nolink&1135x809}}
+

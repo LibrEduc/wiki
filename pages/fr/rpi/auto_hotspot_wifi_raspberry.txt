@@ -1,0 +1,31 @@
+Comment faire apparaître le raspberry comme point d'accès wifi afin qu'il puisse distribuer des adresses IP à connecter ?
+
+
+Pour obtenir ce travail, vous devez connecter votre Pi à Internet à l'aide d'un câble LAN.
+
+
+Ensuite, copiez et collez dans une session Terminal LX
+
+
+wget http://git.io/wZV8tg -O ipispot.sh
+
+
+et puis tapez
+
+
+sudo bash ipispot.sh
+
+
+Vous devrez répondre à une série de questions, mais si vous êtes un geek de pointe ou si le réseau que vous utilisez utilise l'adresse 10.0.0.xx, accepter simplement la valeur par défaut pour chaque question .
+
+
+Les seules exceptions pourraient être le numéro de votre pays et le canal WiFi
+
+
+A la fin, il vous sera demandé de redémarrer - une fois fait, vous devriez maintenant voir un Spot wifi et vous y connecter.
+
+
+Source : http://cymplecy.wordpress.com/2014/08/01/class-hotspot/
+
+
+~~COMPLEX_TABLES~~

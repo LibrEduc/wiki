@@ -1,0 +1,17 @@
+======   Parcours destiné à des enfants débutants de 7 à 10 ans.   ======
+
+Mais les essais en autonomie, la démarche d’investigation à chaque moment, le clic avec des souris d'adultes peuvent être fatigants pour des petits.
+
+//Je recommande plutôt de commencer à partir de 9 ans.//
+
+{{url>https://player.vimeo.com/video/156625158?byline=0&portrait=0 640px, 360px noborder noscroll}}
+
+Suivez aussi les sous-rubriques ci-dessous :
+
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique8|1er contact avec Scratch]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique9|piloter Scratchie]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique10|Dr Maboul !]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique27|un bidule qui clignote]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique28|un bidule que j’oriente dans toutes les directions]]
+  * [[http://robot.technologiescollege.fr/spip.php?rubrique29|un bidule qui roule]]
+

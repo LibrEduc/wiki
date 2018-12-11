@@ -1,0 +1,14 @@
+====== Supervision ======
+
+ou pilotage de la carte en temps réel avant programmation.
+
+Utilisation de s2aio mais surtout du module pymata intégré : __[[https://github.com/MrYsLab/s2aio/wiki|wiki d'Alan Yorinks]]__\\
+\\
+Pour Windows, il ne vous reste plus qu'à télécharger le package suivant : __[[https://github.com/technologiescollege/ressources/blob/master/logiciels/s2aio.7z?raw=true|fichier "s2aio.7z" à dézipper]]__\\
+\\
+**Téléverser FirmataPlus (depuis __[[http://www.pedagogie.ac-nantes.fr/-814254.kjsp|l'IDE Arduino TechnoNantes]]__ __[[https://github.com/technologiescollege/arduino/archive/master.zip|téléchargeable sur Github]]__) dans la carte :** \\
+{{vimeo>115398997?large?rel=0}}
+
+\\
+Lancer le fichier BATCH : **//pymata-aio.bat//**, compléter le bon port COM et laisser ce script lancé pour communiquer. Ou alors exécutez //PyMata // depuis le panneau de contrôle de la même façon que //s2aio//.
+

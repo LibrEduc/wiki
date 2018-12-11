@@ -1,0 +1,23 @@
+=====    Il n'y a pas de mot de passe si vous êtes en local !    =====
+
+Dans le cas où vous avez décompressé les fichiers dans un dossier local de l'ordinateur et que vous ouvrez le fichier '//index.html//' avec Firefox, Blockly@rduino le détecte et vous redirige automatiquement sur le fichier '**\examples\examples.html**'.
+
+Dans le cas où vous déposez les fichiers décompressés dans un dossier partagé pour être lu par les postes élèves, c'est à vous de prévoir de **ne partager ce dossier qu'en lecture seule**.
+====== Changer le mot de passe ======
+
+Avant de remonter tous les fichiers sur un serveur web, qui fait tourner PHP, vous devez y insérer votre mot de passe.
+
+Tout d'abord il faut le //hacher// en MD5 : [[http://www.cryptage.org/outil-crypto-hachage.html|http://www.cryptage.org/outil-crypto-hachage.html]] ou [[http://www.cryptage-md5.com/|http://www.cryptage-md5.com/]]
+
+Ensuite vous ouvrez le fichier "**\examples\examples.php**" à la ligne 22 :
+<code>
+<?php
+$password = 'd958f5cd72248c04ffbb271bf8dd5f14';
+</code>
+
+Vous remplacez ensuite le hashage existant par le votre, vous auvegardez puis remontez le tout sur votre serveur.
+
+Quand vous vous y connecterez avec Firefox, Blockly@rduino le détecte et vous redirigera automatiquement sur le fichier '**\examples\examples.php**' :
+
+{{http://info.technologiescollege.fr//wiki/lib/plugins/ckgedit/fckeditor/userfiles/image/fr/arduino/blockly_rduino/exemples/exemple2.jpg?nolink&554x185}}
+

@@ -1,0 +1,21 @@
+FIXME **This page is not fully translated, yet. Please help completing the translation.** \\
+//(remove this paragraph once the translation is finished)//
+
+mBlock is a customized version of [[http://scratch.mit.edu/|Scratch ]]which is a graphic programming language(developed by the lifelong kindergarten group at MIT Media Lab). With mBlock, those who are familiar with Scratch can easily interact with electronic modules in Arduino eco-system.
+
+[[http://mblock.cc/wp-content/uploads/2015/01/680.jpg|{{  http://mblock.cc/wp-content/uploads/2015/01/680.jpg?nolink&680x513  }}]]
+
+mBlock add some hardware-related blocks in the original Scratch, with these blocks, users can read sensors, control motors and even a whole robot.
+
+Besides blocks for the basic microcontroller functionalities, analog and digital writes and reads, PWM outputs. There are also blocks for each specific electronic modules, such as ultrasonic sensor, temperature sensor, light sensor, DC motor driver, stepper driver, etc. With these blocks, it’s simple to interact with many kinds of electronic modules.
+
+The mBlock is modified based on the source code of Scratch 2.0 offline version, mBlock plug in for the online version of Scratch is under devoloping.
+
+{{  http://mblock.cc/wp-content/uploads/2014/08/Mblock_web_01.jpg?nolink&800x754  }}
+
+It is easy to use with mBlock to interact with electronic modules, just four steps to get all ready.
+
+{{http://mblock.cc/wp-content/uploads/2014/08/Mblock_web_02.jpg?nolink&800x799}}
+
+mBlock supports Arduino Uno, Lenardo boards, Makeblock mCore(Based on Arduino Uno) and etc. With open communication protocols and source code, it is easy to add new support for new hardware.
+

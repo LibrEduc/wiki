@@ -1,0 +1,26 @@
+
+
+  * [[:en:accueil|Start]]
+  *  [[:en:arduino|Arduino]]
+      *  [[:en:shield_easycon|Easycon ?]]
+        * [[:en:easycon1|Easycon1]]
+        * [[:en:easycon2|Easycon2]]
+  *  [[:en:blockly_rduino|Blockly@rduino]]
+      * [[:en:blockly_rduino:create_blocks|Create multilingual blocks]]
+      * [[:en:blockly_rduino:tweak|Tweak]]
+      * [[:en:blockly_rduino:tutos_videos|Tutorial videos]]
+  *  [[:en:raspberry_pi|Raspberry Pi]]
+      *  [[:en:piface|PiFace ?]]
+        * [[:en:piface_digital|PiFace Digital IO]]
+        * [[:en:pirocon|PiRoCon]]
+  *  [[:en:makeblock|Makeblock]]
+      *  [[:en:makeblock:mbot|mBot]]
+        * [[:en:makeblock:mbot:bugs|bugs & enhancement]]
+      *  [[:en:makeblock:mbot|mBlock]]
+        * [[:en:makeblock:mblock:bugs|bugs & enhancement]]
+  * [[:en:scratch|Scratch2]]
+  * [[:en:picaxe|Picaxe]]
+  * [[:en:contact|Contact]]
+
+  * [[http://info.technologiescollege.fr/wiki/doku.php|Start (multilingual)]]
+

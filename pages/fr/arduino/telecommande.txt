@@ -1,0 +1,11 @@
+[[http://www.libremechanics.com/?q=node/30|http://www.libremechanics.com/?q=node/30]]
+
+Simplissime ! Une télécommande 4 boutons qui sont détectés par la carte comme des impulsions numériques en tout-ou-rien. Il n'y a rien à régler du tout, les fréquences sont imposées par le fabricant.
+
+Il suffit de **lire en entrée numérique** chacune des 4 broches du récepteur, répérées de D0 à D3 :
+
+{{http://www.libremechanics.com/sites/default/files/XY-DJM-5V RF module_0.jpg?nolink&274x426}}
+
+**Démonstration :**
+
+<html><iframe width="853" height="480" src="//www.youtube-nocookie.com/embed/64uwxP_S3WY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></html>
